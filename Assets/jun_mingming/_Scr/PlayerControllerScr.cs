@@ -30,6 +30,8 @@ public class PlayerControllerScr : MonoBehaviour
 
 
     [SerializeField] private bool b_w;
+    
+    [SerializeField] private bool isReversing = false;//역재생하는 동안에는 이동이나 입력 불가
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -38,9 +40,12 @@ public class PlayerControllerScr : MonoBehaviour
     }
     private void Update()
     {
-        PlayerInput();
-        PlayerMouse();
-        PlayerMove();
+        if (!isReversing)
+        {
+            PlayerInput();
+            PlayerMouse();
+            PlayerMove();
+        }
         //BustMorph();
         #region debug
         if (Input.GetKeyDown(KeyCode.N))

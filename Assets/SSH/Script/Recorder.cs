@@ -10,6 +10,8 @@ public class Recorder : MonoBehaviour
     public bool isReversing;
     [SerializeField] private Transform positionTarget;
     [SerializeField] private Transform rotationTarget;
+    [SerializeField] private Transform giveRotationTarget;
+    [SerializeField] private Transform cameraPosition;
     
     private void Start()
     {
@@ -40,7 +42,8 @@ public class Recorder : MonoBehaviour
                 print("reverse");
                 pastData data = _datas.Pop();
                 positionTarget.position = data.position;
-                rotationTarget.rotation = data.rotation;
+                giveRotationTarget.localRotation = data.rotation;
+                cameraPosition.rotation = data.rotation;
             }
             isReversing = false;
         }
