@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         inputAction += Test;
+        print(name);
     }
 
     private void Update()

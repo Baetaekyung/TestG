@@ -9,6 +9,7 @@ public class InputTest : MonoBehaviour
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
+        print(name);
     }
 
     private void Start()

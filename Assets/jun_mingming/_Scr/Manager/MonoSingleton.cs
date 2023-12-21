@@ -55,7 +55,8 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         else
         {
             instance = (T)this;
-            print(instance.gameObject.name);
+            print(instance.name);
+            //print(typeof(T).FullName);
         }
     }
     protected virtual void OnDestroy()
