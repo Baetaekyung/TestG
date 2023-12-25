@@ -1427,6 +1427,12 @@ MonoBehaviour:
   isReversing: 0
   positionTarget: {fileID: 1467525787}
   rotationTarget: {fileID: 973338356}
+  giveRotationTarget: {fileID: 1095001314}
+  giveRotationYawTarget: {fileID: 1087103289}
+  giveRotationPitchTarget: {fileID: 857694007}
+  RotationYawTarget: {fileID: 1087103289}
+  RotationPitchTarget: {fileID: 857694007}
+  cameraPosition: {fileID: 973338356}
 --- !u!1 &1358727118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1658,7 @@ MonoBehaviour:
   speed: 5
   speedMax: 10
   b_w: 1
+  isReversing: 0
 --- !u!143 &1467525789
 CharacterController:
   m_ObjectHideFlags: 0
