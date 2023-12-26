@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TaeKyung/T_Scene/TSceneT.unity
+    guid: 3237fecd93e5bee4184cb1e1f787a4b1
+  - enabled: 1
+    path: Assets/TaeKyung/T_Scene/TMainScene.unity
+    guid: adb68b965dd2bc44282811e4a72ebe9a
   m_configObjects: {}
