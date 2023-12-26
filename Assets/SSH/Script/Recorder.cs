@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Recorder : MonoBehaviour
 {
-    private Stack<pastData> _datas;
+    private Stack<PastData> _datas;
     public bool isReversing;
     [SerializeField] private Transform positionTarget;
     [SerializeField] private Transform rotationTarget;
@@ -17,7 +17,7 @@ public class Recorder : MonoBehaviour
     private void Start()
     {
         isReversing = false;
-        _datas = new Stack<pastData>();
+        _datas = new Stack<PastData>();
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class Recorder : MonoBehaviour
             UI_Test_Gay.Instance.t2.text = rotationTarget.rotation.eulerAngles.ToString();
             pla.Gay(rotationTarget.rotation.eulerAngles);
             rotationTarget.localRotation = Quaternion.identity;
-            _datas.Push( new pastData(positionTarget.position, rotationTarget.rotation));
+            _datas.Push( new PastData(positionTarget.position, rotationTarget.rotation));
             print("data pushed");
         }
         else
@@ -44,7 +44,7 @@ public class Recorder : MonoBehaviour
             if (_datas.Count > 0)
             {
                 print("reverse");
-                pastData data = _datas.Pop();
+                PastData data = _datas.Pop();
                 positionTarget.position = data.position;
                 rotationTarget.rotation = data.rotation;
                 //giveRotationTarget.localRotation = data.rotation;
