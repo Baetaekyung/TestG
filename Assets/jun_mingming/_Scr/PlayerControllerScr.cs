@@ -86,7 +86,7 @@ public class PlayerControllerScr : MonoBehaviour
     {
         //mouse
         xRotation -= Input.GetAxisRaw("Mouse Y") * ySens;
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         yRotation += Input.GetAxisRaw("Mouse X") * xSens;
 
         direction = orientationY.forward * Input.GetAxis("Vertical") + orientationY.right * Input.GetAxis("Horizontal");
@@ -110,7 +110,7 @@ public class PlayerControllerScr : MonoBehaviour
     }
     public void Gay(Vector3 gay)
     {
-        xRotation = gay.x;
+        xRotation = gay.x>180 ? gay.x-360 : gay.x;
         yRotation = gay.y;
     }
 }
