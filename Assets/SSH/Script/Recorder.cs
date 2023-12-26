@@ -34,11 +34,12 @@ public class Recorder : MonoBehaviour
         if (isReversing == false)
         {
             UI_Test_Gay.Instance.t2.text = rotationTarget.rotation.eulerAngles.ToString();
+            print(rotationTarget.rotation.eulerAngles.x);
             pla.Gay(rotationTarget.rotation.eulerAngles);
             rotationTarget.localRotation = Quaternion.identity;
             _datas.Push( new PastData(positionTarget.position, rotationTarget.rotation));
             print("data pushed");
-        }
+        }   
         else
         {
             if (_datas.Count > 0)
