@@ -10,8 +10,9 @@ public class Recorder : MonoBehaviour
     public bool isReversing;
     [SerializeField] private Transform positionTarget;
     [SerializeField] private Transform rotationTarget;
-    [SerializeField] private Transform giveRotationTarget;
-    [SerializeField] private Transform cameraPosition;
+    public PlayerControllerScr pla;
+    //[SerializeField] private Transform giveRotationTarget;
+    //[SerializeField] private Transform cameraPosition;
     
     private void Start()
     {
@@ -32,6 +33,9 @@ public class Recorder : MonoBehaviour
     {
         if (isReversing == false)
         {
+            UI_Test_Gay.Instance.t2.text = rotationTarget.rotation.eulerAngles.ToString();
+            pla.Gay(rotationTarget.rotation.eulerAngles);
+            rotationTarget.localRotation = Quaternion.identity;
             _datas.Push( new pastData(positionTarget.position, rotationTarget.rotation));
             print("data pushed");
         }
@@ -42,8 +46,9 @@ public class Recorder : MonoBehaviour
                 print("reverse");
                 pastData data = _datas.Pop();
                 positionTarget.position = data.position;
-                giveRotationTarget.localRotation = data.rotation;
-                cameraPosition.rotation = data.rotation;
+                rotationTarget.rotation = data.rotation;
+                //giveRotationTarget.localRotation = data.rotation;
+                //cameraPosition.rotation = data.rotation;
             }
             isReversing = false;
         }

@@ -589,8 +589,8 @@ GameObject:
   - component: {fileID: 418394199}
   - component: {fileID: 418394202}
   - component: {fileID: 418394201}
-  - component: {fileID: 418394200}
   - component: {fileID: 418394203}
+  - component: {fileID: 418394200}
   m_Layer: 13
   m_Name: t/ray
   m_TagString: Untagged
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactiveObjects:
   - {fileID: 172432418}
-  hp: 1
+  hp: 10
   delay: 0
   b_enableTrigger: 1
 --- !u!1 &448257971
@@ -1376,7 +1376,7 @@ GameObject:
   - component: {fileID: 1095001315}
   - component: {fileID: 1095001316}
   m_Layer: 0
-  m_Name: Viewmodel
+  m_Name: Viewmodel/Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1413,6 +1413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 973338356}
+  animator: {fileID: 0}
+  rayFuck: 1.5
 --- !u!95 &1095001316
 Animator:
   serializedVersion: 5

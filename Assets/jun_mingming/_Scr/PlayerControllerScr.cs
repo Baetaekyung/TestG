@@ -28,9 +28,9 @@ public class PlayerControllerScr : MonoBehaviour
     private Vector3 direction2;
     private CharacterController characterController;
 
-
+    public Vector3 gayfuck;
+    public Recorder rec;
     [SerializeField] private bool b_w;
-    
     [SerializeField] private bool isReversing = false;//역재생하는 동안에는 이동이나 입력 불가
     private void Awake()
     {
@@ -72,6 +72,13 @@ public class PlayerControllerScr : MonoBehaviour
                 Cursor.visible = true;
             }
         }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+
+        }
+        UI_Test_Gay.Instance.t1.text = orientationZ.rotation.eulerAngles.ToString();
+        //UI_Test_Gay.Instance.t2.text = orientationY.localRotation.y.ToString();
+        //UI_Test_Gay.Instance.t3.text = orientationZ.localRotation.z.ToString();
         #endregion
         //PlayerHud.Instance.t1.text = Input.GetAxis("Horizontal").ToString();
     }
@@ -100,5 +107,10 @@ public class PlayerControllerScr : MonoBehaviour
     {
         //orientationZ.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(bob.Evaluate(Mathf.Abs(Input.GetAxisRaw("Mouse X"))) * -Input.GetAxisRaw("Mouse X"), -2, 2));
         orientationZ.localRotation = Quaternion.Euler(0, 0, bob.Evaluate(Mathf.Abs(Input.GetAxis("Horizontal"))) * -Input.GetAxis("Horizontal"));
+    }
+    public void Gay(Vector3 gay)
+    {
+        xRotation = gay.x;
+        yRotation = gay.y;
     }
 }
