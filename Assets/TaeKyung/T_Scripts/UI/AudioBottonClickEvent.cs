@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class AudioBottonClickEvent : MonoBehaviour, IPointerClickHandler
+public class AudioBottonClickEvent : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private GameObject audioPanel;
-    public void OnPointerClick(PointerEventData eventData)
+
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (SettingPopupManager.Instance.currentPopupExist && !audioPanel.activeSelf)
         {
