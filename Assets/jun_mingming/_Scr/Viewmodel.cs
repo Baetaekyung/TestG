@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Viewmodel : MonoBehaviour
 {
     public Transform cam;
+
     public Animator animator;
     public float rayFuck;
     private bool b_gay = false;
@@ -14,7 +14,7 @@ public class Viewmodel : MonoBehaviour
     }
     private void Update()
     {
-        //RayTest();
+        RayTest();
     }
     private void LateUpdate()
     {
