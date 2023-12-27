@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class ExitBottonClickEvent : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private Image exitPanel;
+    [SerializeField] private GameObject exitPanel;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        exitPanel.gameObject.SetActive(true);
-        UIManager.Instance.AllBottonActiveFalse();
+        if (!exitPanel.activeSelf)
+        {
+            exitPanel.gameObject.SetActive(true);
+            UIManager.Instance.CurrentPopupCount++;
+        }
     }
 }

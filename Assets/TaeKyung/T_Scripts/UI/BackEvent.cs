@@ -13,7 +13,7 @@ public class BackEvent : MonoBehaviour, IPointerClickHandler
 
     private void BackEventFunc()
     {
+        UIManager.Instance.CurrentPopupCount--;
         currentPanel.SetActive(false);
-        UIManager.Instance.AllBottonActiveTrue();
     }
 }
