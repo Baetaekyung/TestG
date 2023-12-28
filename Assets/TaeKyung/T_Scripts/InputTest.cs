@@ -9,7 +9,6 @@ public class InputTest : MonoBehaviour
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
-        print(name);
     }
 
     private void Start()
@@ -24,6 +23,6 @@ public class InputTest : MonoBehaviour
 
     private void Inputs()
     {
-        Debug.Log("构 备泅窍瘤..");
+        //Debug.Log("构 备泅窍瘤..");
     }
 }

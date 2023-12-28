@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Trigger_Raycast : TriggerBehavior
+public class Trigger_Raycast : NewBehaviourScript
 {
-    //fuck you
+    //fuck you 
 }
