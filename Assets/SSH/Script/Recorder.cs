@@ -37,7 +37,7 @@ public class Recorder : MonoBehaviour
             pla.Gay(rotationTarget.rotation.eulerAngles);
             rotationTarget.localRotation = Quaternion.identity;
             _datas.Push(new PastData(positionTarget.position, rotationTarget.rotation));
-            print("data pushed");
+            //print("data pushed");
         }   
         else
         {

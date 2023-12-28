@@ -35,10 +35,8 @@ public class PlayerControllerScr : MonoBehaviour
     private Vector3 direction2;//
     private CharacterController characterController;
 
-    public Vector3 gayfuck;//
     [SerializeField] private bool b_w;
     public bool isReversing = false;//역재생하는 동안에는 이동이나 입력 불가
-    private KeyCode forwardKey;
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -52,7 +50,6 @@ public class PlayerControllerScr : MonoBehaviour
         if (!isReversing)
         {
             PlayerInput();
-            PlayerAdditionalPhysics();
             PlayerMouse();
             PlayerMove();
         }
@@ -128,7 +125,9 @@ public class PlayerControllerScr : MonoBehaviour
     }
     private void PlayerMove()
     {
-        direction *= speed * Time.deltaTime;
+        direction *= speed;
+        PlayerAdditionalPhysics();
+        direction *= Time.deltaTime;
         characterController.Move(direction);
     }
     private void PlayerAdditionalPhysics()
@@ -139,7 +138,7 @@ public class PlayerControllerScr : MonoBehaviour
         }
         else
         {
-            _yVal += gravity * Time.deltaTime;
+            _yVal += gravity * Time.deltaTime; //현실적인 중력 만들기... 좆나 빨리 떨어짐
         }
         direction.y = _yVal;
     }
