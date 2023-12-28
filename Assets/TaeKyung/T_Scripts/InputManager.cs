@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         inputAction += Test;
-        print(name);
+        //print(name);
     }
 
     private void Update()
@@ -29,6 +29,6 @@ public class InputManager : MonoBehaviour
 
     private void Test()
     {
-        Debug.Log("입력을 받다...");
+        //Debug.Log("입력을 받다...");
     }
 }

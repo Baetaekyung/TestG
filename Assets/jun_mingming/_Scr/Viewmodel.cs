@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 public class Viewmodel : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class Viewmodel : MonoBehaviour
     public Animator animator;
     public float rayFuck;
     private bool b_gay = false;
+    private Trigger_Raycast tCock;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -27,13 +26,17 @@ public class Viewmodel : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.DrawRay(transform.position, transform.forward * rayFuck, Color.red, 5);
-                if (gay.transform.TryGetComponent(out Trigger_Raycast ming))
+                if (gay.transform.TryGetComponent(out tCock))
                 {
                     animator.Play("Interacting");
-                    ming.HandleTrigger();
+                    tCock.InitDieTime();
                     b_gay = true;
                 }
             }
+        }
+        if (b_gay)
+        {
+            tCock.HandleTrigger();
         }
         if (Input.GetKeyUp(KeyCode.E) && b_gay)
         {
