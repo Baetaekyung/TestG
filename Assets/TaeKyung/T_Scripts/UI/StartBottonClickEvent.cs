@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class StartBottonClickEvent : MonoBehaviour, IPointerDownHandler
 {
-    [SerializeField] private string sceneNameToLoad;
+    [SerializeField] private GameObject chapterSelectPanel;
     public void OnPointerDown(PointerEventData eventData)
     {
-        SceneManager.LoadScene(sceneNameToLoad);
+        chapterSelectPanel.SetActive(true);
+        UIManager.Instance.CurrentPopupCount++;
     }
 }
 
