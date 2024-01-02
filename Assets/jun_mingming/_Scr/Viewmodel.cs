@@ -1,11 +1,13 @@
 using UnityEngine;
-public class Viewmodel : MonoBehaviour
+[AttributeSingleton(SingletonFlags.NoAutoInstance)]
+public class Viewmodel : MonoSingleton<Viewmodel>
 {
     public Transform cam;
 
     public Animator animator;
     public float rayFuck;
     private bool b_gay = false;
+    public bool b_fuck = false;
     private Trigger_Raycast tCock;
     private void Awake()
     {
@@ -37,6 +39,12 @@ public class Viewmodel : MonoBehaviour
         if (b_gay)
         {
             tCock.HandleTrigger();
+            if (b_fuck)
+            {
+                print("Tt คว!");
+                b_fuck = false;
+                CancelInteract();
+            }
         }
         if (Input.GetKeyUp(KeyCode.E) && b_gay)
         {
