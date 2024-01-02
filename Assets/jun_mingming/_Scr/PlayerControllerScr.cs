@@ -160,8 +160,5 @@ public class PlayerControllerScr : MonoBehaviour
         yRotation = gay.y;
         PlayerMouse();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        print(other.name);
-    }
+
 }

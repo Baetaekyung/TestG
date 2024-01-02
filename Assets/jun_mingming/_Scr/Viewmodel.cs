@@ -9,8 +9,9 @@ public class Viewmodel : MonoSingleton<Viewmodel>
     private bool b_gay = false;
     public bool b_fuck = false;
     private Trigger_Raycast tCock;
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         animator = GetComponent<Animator>();
     }
     private void Update()
