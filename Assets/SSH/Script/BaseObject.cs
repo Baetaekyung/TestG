@@ -24,7 +24,7 @@ public class BaseObject : MonoBehaviour
         {
             onMoveChanged?.Invoke(transform.position - beforePos);
             beforePos = transform.position;
-            print("movechanged");
+            print("IMoved");
         }
     }
 
@@ -32,16 +32,16 @@ public class BaseObject : MonoBehaviour
     {
         transform.Translate(v);
         beforePos = transform.position;
-        print("sibal");
+        print("entangleMoved");
     }
 
-    public void SetEntanglement(Action<Vector3> action)
+    public void SetEntanglement(ref Action<Vector3> action)
     {
         print("entangled");
         action += MovePosition;
         myState = State.Entangled;
     }
-    public void UnSetEntanglement(Action<Vector3> action)
+    public void UnSetEntanglement(ref Action<Vector3> action)
     {
         print("untangled");
         action -= MovePosition;

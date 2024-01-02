@@ -11,11 +11,11 @@ public class Entangler : BaseObject
         base.Update();
         if (Input.GetKeyDown(KeyCode.G))
         {
-            _baseObject.SetEntanglement(onMoveChanged);
+            _baseObject.SetEntanglement(ref onMoveChanged);
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            _baseObject.UnSetEntanglement(onMoveChanged);
+            _baseObject.UnSetEntanglement(ref onMoveChanged);
         }
     }
 
