@@ -27,6 +27,6 @@ public class Player : MonoSingleton<Player>
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        Gay -= UI_Test_Gay.Instance.UpdateEnergy;
+        Gay -= UI_Test_Gay.Instance.UpdateEnergy;//나중에고칠께 ;ㅅ;..
     }
 }

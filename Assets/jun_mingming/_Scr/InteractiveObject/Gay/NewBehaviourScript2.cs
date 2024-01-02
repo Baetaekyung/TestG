@@ -12,7 +12,7 @@ public class NewBehaviourScript2 : NewBehaviourScript1
     }
     public override void OnDestroy()
     {
-        Player.Instance.Gay -= HandleCollider;
+        Player.Instance.Gay -= HandleCollider;//나중에고칠께 ;ㅅ;..
     }
     private void HandleCollider()
     {

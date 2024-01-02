@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : InteractiveObject
+public class Door : MonoBehaviour
 {
-    public override void Interact()
+    public void Interact()
     {
         print("open the door!");
     }
