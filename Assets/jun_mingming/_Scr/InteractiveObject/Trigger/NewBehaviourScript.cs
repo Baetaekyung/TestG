@@ -15,7 +15,7 @@ public class NewBehaviourScript : TriggerBehavior //이거 이름뭐로할까 정한사람 �
         if (Gay())
         {
             base.HandleTrigger();
-            Player.Instance.playerViewmodel.b_fuck = true;
+            Viewmodel.Instance.b_fuck = true;
             InitDieTime();
         }
     }

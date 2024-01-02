@@ -1,5 +1,6 @@
 using UnityEngine;
-public class Viewmodel : MonoBehaviour
+[AttributeSingleton(SingletonFlags.NoAutoInstance)]
+public class Viewmodel : MonoSingleton<Viewmodel>
 {
     public Transform cam;
 
