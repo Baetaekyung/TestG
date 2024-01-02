@@ -973,11 +973,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020350495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abafb491d4b9d8f488adfe25df1f947c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e70bb6869a7cf64a94ec05dfde9c78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myState: 0
-  _baseObject: {fileID: 1834519541}
+  playerControllerScr: {fileID: 1467525788}
+  playerViewmodel: {fileID: 1095001315}
+  recorder: {fileID: 1285140969}
+  energy: 0
 --- !u!1 &1058851862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,6 +1190,7 @@ MonoBehaviour:
   cam: {fileID: 973338356}
   animator: {fileID: 0}
   rayFuck: 0
+  b_fuck: 0
 --- !u!1 &1103511529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,6 +1270,7 @@ MonoBehaviour:
   t1: {fileID: 877331438}
   t2: {fileID: 1860201979}
   t3: {fileID: 1831307375}
+  energy: {fileID: 0}
 --- !u!1 &1282462383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1584,7 @@ GameObject:
   - component: {fileID: 1467525787}
   - component: {fileID: 1467525788}
   - component: {fileID: 1467525789}
+  - component: {fileID: 1467525790}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -1616,8 +1621,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435f04e5108e49942aecb161de82cdba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientationX: {fileID: 1087103289}
-  orientationY: {fileID: 857694007}
+  orientationX: {fileID: 857694007}
+  orientationY: {fileID: 1087103289}
   orientationZ: {fileID: 1844911606}
   targetFrame: 60
   xSens: 1
@@ -1705,6 +1710,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &1467525790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467525786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abafb491d4b9d8f488adfe25df1f947c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myState: 0
+  beforePos: {x: 0, y: 0, z: 0}
+  _baseObject: {fileID: 1834519541}
 --- !u!1 &1831307373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myState: 0
+  beforePos: {x: 0, y: 0, z: 0}
 --- !u!65 &1834519542
 BoxCollider:
   m_ObjectHideFlags: 0
