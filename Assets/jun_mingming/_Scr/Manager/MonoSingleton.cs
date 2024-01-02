@@ -60,7 +60,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         }
     }
     protected virtual void OnDestroy()
-    {
+    {//종료시 참조하는거 고치기
     }
 
 }

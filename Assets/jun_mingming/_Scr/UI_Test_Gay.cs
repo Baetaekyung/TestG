@@ -11,5 +11,8 @@ public class UI_Test_Gay : MonoSingleton<UI_Test_Gay>
 
     [Header("Fuck")]
     public Text energy;
-
+    public void UpdateEnergy()
+    {
+        energy.text = "Energy : " + Player.Instance.energy;
+    }
 }
