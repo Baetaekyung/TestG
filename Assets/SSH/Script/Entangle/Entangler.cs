@@ -18,18 +18,4 @@ public class Entangler : BaseObject
             _baseObject.UnSetEntanglement(ref onMoveChanged);
         }
     }
-
-    // void Update()
-    // {
-    //     
-    //     if (Input.GetKeyDown(KeyCode.G))
-    //     {
-    //         _baseObject.SetEntanglement(onMoveChanged);
-    //     }
-    //     if (Input.GetKeyDown(KeyCode.H))
-    //     {
-    //         _baseObject.UnSetEntanglement(onMoveChanged);
-    //     }
-    //     
-    // }
 }
