@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 public class NewInputSystemUsedPlayerControllerScr : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class NewInputSystemUsedPlayerControllerScr : MonoBehaviour
     private Vector3 direction2;//
     private CharacterController characterController;
 
-    private Vector2 inputDirection;
+    private GemTest inputAction;
     
     public Vector3 gayfuck;//
     [SerializeField] private bool b_w;
@@ -44,6 +45,8 @@ public class NewInputSystemUsedPlayerControllerScr : MonoBehaviour
     private KeyCode forwardKey;
     private void Awake()
     {
+        inputAction = new GemTest();
+        inputAction.Enable();
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -95,11 +98,20 @@ public class NewInputSystemUsedPlayerControllerScr : MonoBehaviour
         //PlayerHud.Instance.t1.text = Input.GetAxis("Horizontal").ToString();
     }
 
-    public void GetDirectionInputPressed(InputAction.CallbackContext value)
-    {
-        inputDirection = value.ReadValue<Vector2>();
-        print("inputd");
-    }
+    // private bool ispressed = false;
+    // public void GetDirectionInputPressed(InputAction.CallbackContext value)
+    // {
+    //     if (ispressed)
+    //     {
+    //         inputDirection = Vector2.zero;
+    //         print("inputd");
+    //     }
+    //     else
+    //     {
+    //         inputDirection = value.ReadValue<Vector2>();
+    //         print("inputd");
+    //     }
+    // }
     private void PlayerInput()
     {
         //mouse
@@ -109,9 +121,9 @@ public class NewInputSystemUsedPlayerControllerScr : MonoBehaviour
 
         //keys
         //dir
-        direction = orientationY.forward * inputDirection.y + orientationY.right * inputDirection.x;
+        direction = orientationY.forward * inputAction.Player.Move.ReadValue<Vector2>().y + orientationY.right * inputAction.Player.Move.ReadValue<Vector2>().x;
         direction = direction.magnitude < 1 ? direction : direction.normalized;
-
+        
         //space/jump
         if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
         {

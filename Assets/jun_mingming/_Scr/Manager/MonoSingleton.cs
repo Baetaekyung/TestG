@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Reflection;
 
-[DefaultExecutionOrder(-200)]// ÀÌ°Å Á¦´ë·Î ¾Ë¾Æ¿À±â »ó¼ÓÇßÀ»¶§ »ı±â´Â ¹®Á¦
+[DefaultExecutionOrder(-200)]// ì´ê±° ì œëŒ€ë¡œ ì•Œì•„ì˜¤ê¸° ìƒì†í–ˆì„ë•Œ ìƒê¸°ëŠ” ë¬¸ì œ
 public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
 {
-    private static readonly SingletonFlags singletonFlag = typeof(T).GetCustomAttribute<AttributeSingleton>()?.Flags ?? SingletonFlags.None; // À¯´ÏÆ¼ static consturctor Àß µÅ´ÂÁö ¸ğ¸£°ÙÀ½
+    private static readonly SingletonFlags singletonFlag = typeof(T).GetCustomAttribute<AttributeSingleton>()?.Flags ?? SingletonFlags.None; // ìœ ë‹ˆí‹° static consturctor ì˜ ë¼ëŠ”ì§€ ëª¨ë¥´ê²ŸìŒ
     private static T instance = null;
     public static T Instance
     {
@@ -25,7 +25,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         {
             if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().isLoaded)
             {
-                print("·ÎµùÀÌµÆ³ë..");
+                print("ë¡œë”©ì´ëë…¸..");
                 return FindObjectOfType<T>();
             }
             return null;
@@ -46,7 +46,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
     {
         //print("-AwakeInit-");
         //print((bool)instance);
-        print("¹Ö");
+        print("ë°");
         if (instance)
         {
             Debug.LogError("twoSingletons");
