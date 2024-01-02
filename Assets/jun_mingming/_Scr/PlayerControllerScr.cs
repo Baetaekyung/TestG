@@ -103,7 +103,7 @@ public class PlayerControllerScr : MonoBehaviour
         //space/jump
         if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
         {
-            _yVal += jumpForce;
+            PlayerJump();
         }
 
         //speedLogic
@@ -142,6 +142,11 @@ public class PlayerControllerScr : MonoBehaviour
         }
         direction.y = _yVal;
     }
+    private void PlayerJump()
+    {
+        //_yVal += jumpForce;
+        _yVal = Mathf.Sqrt(jumpForce);
+    }
     private void BustMorph()
     {
         //orientationZ.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(bob.Evaluate(Mathf.Abs(Input.GetAxisRaw("Mouse X"))) * -Input.GetAxisRaw("Mouse X"), -2, 2));
@@ -154,5 +159,9 @@ public class PlayerControllerScr : MonoBehaviour
         xRotation = gay.x >= 270 ? gay.x - 360 : gay.x;
         yRotation = gay.y;
         PlayerMouse();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        print(other.name);
     }
 }

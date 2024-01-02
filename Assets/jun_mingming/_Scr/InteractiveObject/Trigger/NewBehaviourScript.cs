@@ -1,5 +1,5 @@
 using UnityEngine;
-public class NewBehaviourScript : TriggerBehavior
+public class NewBehaviourScript : TriggerBehavior //¿Ã∞≈ ¿Ã∏ßππ∑Œ«“±Ó ¡§«—ªÁ∂˜ ª«ª««ÿ¡‹
 {
     [Space(10)]
     public float dieTime;//get only
@@ -12,14 +12,19 @@ public class NewBehaviourScript : TriggerBehavior
     {
         print("c");
         dieTime -= Time.deltaTime;
-        if (dieTime <= 0)
+        if (Gay())
         {
             base.HandleTrigger();
+            Player.Instance.playerViewmodel.b_fuck = true;
             InitDieTime();
         }
     }
     public void InitDieTime()
     {
         dieTime = gay;
+    }
+    public bool Gay()
+    {
+        return dieTime <= 0;
     }
 }
