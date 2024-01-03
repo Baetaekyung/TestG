@@ -15,9 +15,14 @@ public class Curve_Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.GetComponent<Player>() || collision.transform.GetComponent<IsWall>())
+        if (collision.transform.GetComponent<IsWall>())
             return;
-
-        Destroy(collision.gameObject);
+        if (collision.transform.GetComponent<Player>())
+        {
+            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
+        }
+        else
+            Destroy(collision.gameObject);
     }
 }
