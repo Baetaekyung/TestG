@@ -15,9 +15,20 @@ public class Entangler : BaseObject
     public void SetEntangle(BaseObject bo)
     {
         bo.SetEntanglement(ref onMoveChanged);
+        GetEntangle(bo);
     }
     public void UnsetEntangle(BaseObject bo)
     {
         bo.UnSetEntanglement(ref onMoveChanged);
+        UnGetEntangle(bo);
+    }
+
+    public void GetEntangle(BaseObject bo)
+    {
+        SetEntanglement(ref bo.onMoveChanged);
+    }
+    public void UnGetEntangle(BaseObject bo)
+    {
+        UnSetEntanglement(ref bo.onMoveChanged);
     }
 }
