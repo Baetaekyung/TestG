@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControllerScr : MonoBehaviour
+[AttributeSingleton(SingletonFlags.NoAutoInstance)]
+public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
 {
     [Header("General")]
     [SerializeField] private Transform orientationX;
@@ -39,17 +40,15 @@ public class PlayerControllerScr : MonoBehaviour
     private Vector3 dir3;
     private CharacterController characterController;
 
-    public Fuck realFuck;
-    public bool b_enableFucking;
-
     [SerializeField] private bool b_w;
     public bool isReversing = false;//역재생하는 동안에는 이동이나 입력 불가
     public Vector3 GetDirection()
     {
         return direction;
     }
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -89,13 +88,6 @@ public class PlayerControllerScr : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
-        }
-        if (Input.GetKey(KeyCode.Backspace))
-        {
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            b_enableFucking = !b_enableFucking;
         }
         UI_Test_Gay.Instance.t1.text = orientationZ.rotation.eulerAngles.ToString();
         //UI_Test_Gay.Instance.t2.text = orientationY.localRotation.y.ToString();
@@ -157,18 +149,9 @@ public class PlayerControllerScr : MonoBehaviour
     {
         direction *= speed;
         PlayerAdditionalPhysics();
-        if (b_enableFucking)
+        if (!false)
         {
-            realFuck.dir = dir3;
-            realFuck.dir.y *= -1;
-            realFuck.dir.x = 0;
-            realFuck.dir.z = 0;
-
-        }
-        else 
-        {
-            realFuck.dir = Vector3.down;
-
+            FuckBehavior.playerDir = dir3;
         }
         direction *= Time.deltaTime;
 
@@ -191,12 +174,16 @@ public class PlayerControllerScr : MonoBehaviour
         }
         direction.y = _yVal;
     }
-    private void PlayerJump()
+    public void PlayerJump()
     {
         //_yVal += jumpForce;
         _yVal = Mathf.Sqrt(jumpForce);
     }
-
+    public void PlayerJump(float a)
+    {
+        //_yVal += jumpForce;
+        _yVal = Mathf.Sqrt(a);
+    }
     private IEnumerator PlayerDash()
     {
         float currentTime = 0;
