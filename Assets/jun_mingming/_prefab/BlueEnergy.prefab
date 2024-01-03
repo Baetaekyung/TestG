@@ -50,12 +50,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45baad373aae30245b770f6020e50d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactiveObjects:
-  - {fileID: 4980860260024010028}
+  interact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4980860260024010028}
+        m_TargetAssemblyTypeName: BlueEnergy, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hp: 1
   delay: 0
   b_enableTrigger: 1
   triggerType: 0
+  d: []
 --- !u!114 &4980860260024010028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,7 +2234,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1628
+  m_VersionIndex: 1631
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
