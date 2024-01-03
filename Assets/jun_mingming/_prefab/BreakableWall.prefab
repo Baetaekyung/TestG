@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2: {fileID: 1952601807474847223}
+  transperMat: {fileID: 2100000, guid: 21457ce106b153d409dbb3e87ebb26b9, type: 2}
   val: 0
 --- !u!33 &7878539411419425919
 MeshFilter:
