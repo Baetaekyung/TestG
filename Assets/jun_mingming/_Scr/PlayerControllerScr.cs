@@ -26,10 +26,13 @@ public class PlayerControllerScr : MonoBehaviour
     public float speedMax;//
     public float gravity;
     public float _yVal;
+    public float dashForce;
+    public float dashTime;
     private float speed;
 
     public float jumpForce;
     public bool b_running;
+    public bool canDash = true;
 
     private Vector3 direction;
     private Vector3 direction2;//
@@ -106,17 +109,23 @@ public class PlayerControllerScr : MonoBehaviour
             PlayerJump();
         }
 
+        //leftShift/dash
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(PlayerDash());
+        }
+
         //speedLogic
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            b_running = true;
-            speed = speedRun;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            b_running = false;
-            speed = speedWalk;
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift))
+        //{
+        //    b_running = true;
+        //    speed = speedRun;
+        //}
+        //else if (Input.GetKeyUp(KeyCode.LeftShift))
+        //{
+        //    b_running = false;
+        //    speed = speedWalk;
+        //}
     }
     private void PlayerMouse()
     {
@@ -128,6 +137,7 @@ public class PlayerControllerScr : MonoBehaviour
         direction *= speed;
         PlayerAdditionalPhysics();
         direction *= Time.deltaTime;
+        
         characterController.Move(direction);
     }
     private void PlayerAdditionalPhysics()
@@ -147,6 +157,33 @@ public class PlayerControllerScr : MonoBehaviour
         //_yVal += jumpForce;
         _yVal = Mathf.Sqrt(jumpForce);
     }
+
+    private IEnumerator PlayerDash()
+    {
+        float currentTime = 0;
+        var currentDirection = Vector3.zero;
+        if(direction.magnitude == 0)
+        {
+            direction2 = Vector3.forward;
+        }
+        else
+        {
+            direction2 = direction.normalized;
+        }
+        direction2 -= new Vector3(0, direction2.y, 0);
+        while (currentTime <= dashTime)
+        {
+            currentDirection = Vector3.Lerp(currentDirection, direction2, currentTime / dashTime);
+            characterController.Move(currentDirection * Time.deltaTime * dashForce);
+            currentTime += Time.deltaTime;
+            yield return null;
+            if (Input.anyKeyDown)
+            {
+                yield break;
+            }
+        }
+    }
+
     private void BustMorph()
     {
         //orientationZ.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(bob.Evaluate(Mathf.Abs(Input.GetAxisRaw("Mouse X"))) * -Input.GetAxisRaw("Mouse X"), -2, 2));
@@ -160,5 +197,4 @@ public class PlayerControllerScr : MonoBehaviour
         yRotation = gay.y;
         PlayerMouse();
     }
-
 }
