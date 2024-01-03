@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class WallColorSetting : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int itsEnergy;
+    private Color wallColor;
+    private MeshRenderer meshRenderer;
+
+    private void Awake()
     {
-        
+        meshRenderer = GetComponent<MeshRenderer>();
+        wallColor = meshRenderer.material.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        switch (itsEnergy)
+        {
+            case 0:
+                wallColor = Color.white;
+                break;
+            case 1:
+                wallColor = Color.green;
+                break;
+            case 2:
+                wallColor = Color.yellow;
+                break;
+            case 3:
+                wallColor = Color.red;
+                break;
+            default:
+                return;
+        }
+        meshRenderer.material.color = wallColor;
     }
 }
