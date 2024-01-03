@@ -31,6 +31,7 @@ public class Recorder : MonoBehaviour
 
     void LateUpdate()
     {
+        print("이거실행");
         if (isReversing == false)
         {
             UI_Test_Gay.Instance.t2.text = rotationTarget.rotation.eulerAngles.ToString();

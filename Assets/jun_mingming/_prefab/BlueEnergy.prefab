@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7729338100800013304}
   - component: {fileID: 9199900536423747207}
   - component: {fileID: 4069156798969250936}
-  - component: {fileID: 4196262260223028540}
   - component: {fileID: 6828808168261884}
   m_Layer: 0
   m_Name: BlueEnergy
@@ -2234,7 +2233,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1631
+  m_VersionIndex: 1634
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2311,14 +2310,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &4196262260223028540
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377241983696082248}
-  m_Mesh: {fileID: 0}
 --- !u!135 &6828808168261884
 SphereCollider:
   m_ObjectHideFlags: 0
