@@ -39,6 +39,7 @@ public abstract class TriggerBehavior : MonoBehaviour
         b_enableTrigger = true;
         if (hp <= 0)
         {
+            if (triggerType == TriggerType.DontDestroy) return;
             if(triggerType == TriggerType.Destroy)
             {
                 Destroy(gameObject);

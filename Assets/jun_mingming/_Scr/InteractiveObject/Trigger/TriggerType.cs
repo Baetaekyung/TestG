@@ -1,5 +1,6 @@
 public enum TriggerType
 {
     Destroy,
-    DestroyComponent
+    DestroyComponent,
+    DontDestroy
 }

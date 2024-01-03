@@ -124,7 +124,6 @@ public class PlayerControllerScr : MonoBehaviour
             StartCoroutine(PlayerDash());
             SoundManager.Instance.PlayDash();
         }
-
         //speedLogic
         //if (Input.GetKeyDown(KeyCode.LeftShift))
         //{

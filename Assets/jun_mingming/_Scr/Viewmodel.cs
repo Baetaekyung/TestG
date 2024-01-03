@@ -3,6 +3,7 @@ using UnityEngine;
 public class Viewmodel : MonoSingleton<Viewmodel>// 이거 이름 카메라로바꾸기
 {
     public Transform cam;
+    public Transform pickupPosition;
 
     public Animator animator;
     public float rayFuck;
