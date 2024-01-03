@@ -49140,6 +49140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006599009}
   - component: {fileID: 2006599010}
+  - component: {fileID: 2006599011}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -49258,6 +49259,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2006599011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006599008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712f645aa8acc5242a079894014a461a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSound: {fileID: 8300000, guid: 879777f879784b948afd2b13f55a83e2, type: 3}
+  jumpSound: {fileID: 8300000, guid: 25ce2e340a42f1b4db3dc30d691096e1, type: 3}
+  chakjeeSound: {fileID: 8300000, guid: 00e775665b8d38647a39ca11bfce6b00, type: 3}
 --- !u!1001 &2016130218
 PrefabInstance:
   m_ObjectHideFlags: 0
