@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public void Interact()
+    public void Open()
     {
-        print("open the door!");
+        gameObject.SetActive(false);
     }
+    public void Close()
+    {
+        gameObject.SetActive(true);
+    }
+
 }
