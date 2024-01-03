@@ -25,6 +25,7 @@ public class Gun1 : GunBehavior
                 }
                 Entangler.instance.SetEntangle(a);
                 lastBaseObject = a;
+                
             }
         }
     }
