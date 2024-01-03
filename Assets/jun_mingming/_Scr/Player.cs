@@ -12,7 +12,7 @@ public class Player : MonoSingleton<Player>
     protected override void Awake()
     {
         base.Awake();
-        Gay += UI_Test_Gay.Instance.UpdateEnergy;
+        //Gay += UI_Test_Gay.Instance.UpdateEnergy;
     }
     
     public void AddEnergy(int asdad)
@@ -22,11 +22,11 @@ public class Player : MonoSingleton<Player>
     }
     public void Update_Energy()
     {
-        Gay();
+        //Gay();
     }
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        Gay -= UI_Test_Gay.Instance.UpdateEnergy;//나중에고칠께 ;ㅅ;..
+        //Gay -= UI_Test_Gay.Instance.UpdateEnergy;//나중에고칠께 ;ㅅ;..
     }
 }
