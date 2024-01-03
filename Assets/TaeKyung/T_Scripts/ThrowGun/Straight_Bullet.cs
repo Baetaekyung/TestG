@@ -15,12 +15,16 @@ public class Straight_Bullet : MonoBehaviour
         rigid.AddForce(transform.forward * shootForce, ForceMode.Force);
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.transform.CompareTag("Player"))
+        if (collision.transform.GetComponent<IsWall>())
+            return;
+        if (collision.transform.GetComponent<Player>())
         {
-            //가시와 동일한 스크립트
+            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
         }
-        Destroy(gameObject);
+        else
+            Destroy(collision.gameObject);
     }
 }
