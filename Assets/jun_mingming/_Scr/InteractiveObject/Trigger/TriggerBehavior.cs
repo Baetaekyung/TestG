@@ -14,7 +14,7 @@ public abstract class TriggerBehavior : MonoBehaviour
     
     [Header("Destroy")]
     public TriggerType triggerType = TriggerType.Destroy;
-    public List<Component> d;
+    public List<Component> componentDestroy;
     public virtual void HandleTrigger()
     {
         print("beha");
@@ -52,9 +52,9 @@ public abstract class TriggerBehavior : MonoBehaviour
     }
     private void DestroyGay()
     {
-        for(int i = 0; i < d.Count; i++)
+        for(int i = 0; i < componentDestroy.Count; i++)
         {
-            Destroy(d[i]);
+            Destroy(componentDestroy[i]);
         }
     }
     

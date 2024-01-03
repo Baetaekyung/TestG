@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun2 : Item
+public class Gun2 : GunBehavior
 {
     public override void Interaction0()
     {

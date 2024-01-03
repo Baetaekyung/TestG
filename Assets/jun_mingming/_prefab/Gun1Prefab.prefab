@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1133382476355943857
 Transform:
   m_ObjectHideFlags: 0
@@ -49,6 +49,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0.25, z: 0.5}
   delayEquip: 0
   delayUnequip: 0
+  rayRange: 5
 --- !u!33 &6567730621377007187
 MeshFilter:
   m_ObjectHideFlags: 0

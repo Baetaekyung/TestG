@@ -1,6 +1,6 @@
 using UnityEngine;
 [AttributeSingleton(SingletonFlags.NoAutoInstance)]
-public class Viewmodel : MonoSingleton<Viewmodel>
+public class Viewmodel : MonoSingleton<Viewmodel>// 이거 이름 카메라로바꾸기
 {
     public Transform cam;
 
@@ -57,5 +57,14 @@ public class Viewmodel : MonoSingleton<Viewmodel>
         print("cancelInteract");
         animator.SetTrigger("gay");
         b_gay = false;
+    }
+    public bool ShootRay(float gay, out RaycastHit a)
+    {
+        Debug.DrawRay(transform.position, transform.forward * gay, Color.red, 3);
+        if (Physics.Raycast(transform.position, transform.forward, out a, gay))
+        {
+            return true;
+        }
+        else return false;
     }
 }
