@@ -1,51 +1,76 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Inventory : MonoBehaviour
+[AttributeSingleton(SingletonFlags.NoAutoInstance)]
+public class Inventory : MonoSingleton<Inventory>
 {
     public List<Item> item = new List<Item>();
-    public Item currentItem;
     public int currentItemIndex = 0;
     public bool b_enalbeWeaponChange;
-
-    private void Awake()
+    public Transform itemOffset;
+    protected override void Awake()
     {
-        
+        base.Awake();
+        currentItemIndex = 0;
+        item[currentItemIndex].Equip();
     }
     private void Update()
     {
-        if (b_enalbeWeaponChange)
+        if (b_enalbeWeaponChange)//»ç¶ûÈ÷
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 print("1");
-                HandleEquip(1);
+                HandleWeaponChange(0);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 print("2");
-                HandleEquip(2);
+                HandleWeaponChange(1);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 print("3");
-                HandleEquip(3);
+                HandleWeaponChange(2);
             }
+
         }
-    }
-    private void HandleEquip(int a)
-    {
-        if (currentItemIndex != a)
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Equip(a);
+            item[currentItemIndex].Interaction0();
+        }
+        else if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            item[currentItemIndex].Interaction1();
         }
     }
-    private void Equip(int a)
+    public void HandleWeaponChange(int a)
     {
+        if (currentItemIndex != a && item.Count > a)
+        {
+            WeaponChange(a);
+        }
+    }
+    public void WeaponChange(int a)
+    {
+        item[currentItemIndex].Unequip();
         currentItemIndex = a;
-        currentItem.Unequip();
         item[currentItemIndex].Equip();
+    }
+    public void AddItem(Item itema)
+    {
+        item.Add(itema);
+        itema.transform.SetParent(itemOffset);
+        itema.transform.localPosition = itema.offset;
+        itema.gameObject.SetActive(false);
+    }
+    public void RemoveItem(Item itema)//unfinished
+    {
+        item.Remove(itema);
+    }
+    public void RemoveItem(int index)
+    {
+        item.RemoveAt(index);
     }
 
 }

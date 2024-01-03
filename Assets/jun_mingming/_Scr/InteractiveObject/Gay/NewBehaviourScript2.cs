@@ -8,7 +8,7 @@ public class NewBehaviourScript2 : NewBehaviourScript1
     public float val;
     public override void Awake()
     {
-        Player.Instance.Gay += HandleCollider; 
+        Player.Instance.Gay += HandleCollider;
     }
     public override void OnDestroy()
     {
@@ -18,11 +18,19 @@ public class NewBehaviourScript2 : NewBehaviourScript1
     {
         if(Player.Instance.energy > val)
         {
-            collider2.isTrigger = true;
+            DisableCollision();
         }
         else
         {
-            collider2.isTrigger = false;
+            EnableCollision();
         }
+    }
+    private void DisableCollision()
+    {
+        collider2.isTrigger = true;
+    }
+    private void EnableCollision()
+    {
+        collider2.isTrigger = false;
     }
 }

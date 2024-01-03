@@ -32,7 +32,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         }
 
         //AutoInstance
-        GameObject gameObject = new GameObject(typeof(T).FullName);
+        GameObject gameObject = new GameObject(typeof(T).FullName); // Destroy 에서 호출할때, 앱종류시 문제 해결해야함
         T result = gameObject.AddComponent<T>();
         if (singletonFlag.HasFlag(SingletonFlags.DontDestroy))
         {
