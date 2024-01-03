@@ -6,7 +6,7 @@ public abstract class GunBehavior : Item
 {
     protected virtual bool Raycast(float range, out RaycastHit ga)
     {
-        if (Viewmodel.Instance.ShootRay(2, out ga))
+        if (Viewmodel.Instance.ShootRay(range, out ga))
         {
             return true;
         }
