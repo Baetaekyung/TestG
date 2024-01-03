@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlueEnergy : InteractiveObject
+public class BlueEnergy : MonoBehaviour
 {
-    public override void Interact()
+    public void Interact()
     {
         print("¹ÎÇõ¾Æ³ª½È¾îÇÏÁö¸»¾ÆÁÖ.......................................................................................................................................................................................................................................................................................................................................................................................................");
         Player.Instance.AddEnergy(1);
