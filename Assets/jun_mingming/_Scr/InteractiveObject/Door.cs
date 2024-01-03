@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
     public void Interact()
     {
-        print("open the door!");
+        gameObject.SetActive(false);
     }
+
 }
