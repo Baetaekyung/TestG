@@ -703,7 +703,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28d7a2f7a202ee4498932b13f72df0c7, type: 2}
+  - {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -956,7 +956,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 610718025}
-  pickupPosition: {fileID: 0}
   animator: {fileID: 0}
   rayFuck: 1.5
   b_fuck: 0
@@ -1888,7 +1887,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28d7a2f7a202ee4498932b13f72df0c7, type: 2}
+  - {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3050,8 +3049,6 @@ MonoBehaviour:
   jumpForce: 13
   b_running: 0
   canDash: 1
-  realFuck: {fileID: 1485424375}
-  b_enableFucking: 0
   b_w: 1
   isReversing: 0
 --- !u!143 &796741168
@@ -3474,7 +3471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28d7a2f7a202ee4498932b13f72df0c7, type: 2}
+  - {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4440,7 +4437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 28d7a2f7a202ee4498932b13f72df0c7, type: 2}
+  - {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4865,7 +4862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c994a5ebc19d2a346a7edd5817d2f374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  b_enablePlayerEffect: 0
   rigidBody: {fileID: 0}
   speed: 20
   dir: {x: 0, y: 0, z: 0}
@@ -6253,6 +6249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BreakableWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5276556064519432487, guid: 475567a2fb45fdc4e9931fb671977dc4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
