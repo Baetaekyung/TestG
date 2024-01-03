@@ -30,7 +30,7 @@ public class BaseObject : MonoBehaviour
 
     public void MovePosition(Vector3 v)
     {
-        transform.Translate(v);
+        transform.Translate(new Vector3(v.x,-v.y,v.z));
         beforePos = transform.position;
         print("entangleMoved");
     }
