@@ -22,7 +22,7 @@ public class Player : MonoSingleton<Player>
     }
     public void Update_Energy()
     {
-        //Gay();
+        Gay?.Invoke();
     }
     protected override void OnDestroy()
     {
