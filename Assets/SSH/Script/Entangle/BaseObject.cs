@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[DefaultExecutionOrder(-50)]
 public class BaseObject : MonoBehaviour
 {
     public enum State
@@ -10,7 +10,7 @@ public class BaseObject : MonoBehaviour
         Nothing,
         Entangled
     }
-
+    public int dir = 1;
     public State myState = State.Nothing;
 
     public Action<Vector3> onMoveChanged;
@@ -30,7 +30,7 @@ public class BaseObject : MonoBehaviour
 
     public void MovePosition(Vector3 v)
     {
-        transform.Translate(new Vector3(v.x,-v.y,v.z));
+        transform.Translate(new Vector3(v.x,v.y * dir,v.z));
         beforePos = transform.position;
         print("entangleMoved");
     }

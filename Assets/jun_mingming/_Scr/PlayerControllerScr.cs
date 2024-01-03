@@ -36,10 +36,18 @@ public class PlayerControllerScr : MonoBehaviour
 
     private Vector3 direction;
     private Vector3 direction2;//
+    private Vector3 dir3;
     private CharacterController characterController;
+
+    public Fuck realFuck;
+    public bool b_enableFucking;
 
     [SerializeField] private bool b_w;
     public bool isReversing = false;//역재생하는 동안에는 이동이나 입력 불가
+    public Vector3 GetDirection()
+    {
+        return direction;
+    }
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -84,6 +92,10 @@ public class PlayerControllerScr : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Backspace))
         {
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            b_enableFucking = !b_enableFucking;
         }
         UI_Test_Gay.Instance.t1.text = orientationZ.rotation.eulerAngles.ToString();
         //UI_Test_Gay.Instance.t2.text = orientationY.localRotation.y.ToString();
@@ -145,20 +157,37 @@ public class PlayerControllerScr : MonoBehaviour
     {
         direction *= speed;
         PlayerAdditionalPhysics();
+        if (b_enableFucking)
+        {
+            realFuck.dir = dir3;
+            realFuck.dir.y *= -1;
+            realFuck.dir.x = 0;
+            realFuck.dir.z = 0;
+
+        }
+        else 
+        {
+            realFuck.dir = Vector3.down;
+
+        }
         direction *= Time.deltaTime;
-        
+
+
         characterController.Move(direction);
         //SoundManager.Instance.PlayWalk();
     }
     private void PlayerAdditionalPhysics()
     {
+        dir3 = direction;
         if (characterController.isGrounded && _yVal < 0)
         {
             _yVal = -1;
+            dir3.y = 0;
         }
         else
         {
             _yVal += gravity * Time.deltaTime; //현실적인 중력 만들기... 좆나 빨리 떨어짐
+            dir3.y = _yVal;
         }
         direction.y = _yVal;
     }
