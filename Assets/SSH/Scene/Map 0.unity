@@ -4084,6 +4084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abafb491d4b9d8f488adfe25df1f947c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dir: 1
   myState: 0
   beforePos: {x: 0, y: 0, z: 0}
 --- !u!4 &479566474
