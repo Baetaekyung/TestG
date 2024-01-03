@@ -102,17 +102,27 @@ public class PlayerControllerScr : MonoBehaviour
         //dir
         direction = orientationY.forward * Input.GetAxis("Vertical") + orientationY.right * Input.GetAxis("Horizontal");
         direction = direction.magnitude < 1 ? direction : direction.normalized;
-
+        if (direction.magnitude == 0)
+        {
+            SoundManager.Instance.StopWalk();
+        }
+        else
+        {
+            SoundManager.Instance.PlayWalk();
+        }
+        
         //space/jump
         if (Input.GetKeyDown(KeyCode.Space) && characterController.isGrounded)
         {
             PlayerJump();
+            SoundManager.Instance.PlayJumpSound();
         }
 
         //leftShift/dash
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(PlayerDash());
+            SoundManager.Instance.PlayDash();
         }
 
         //speedLogic
@@ -139,6 +149,7 @@ public class PlayerControllerScr : MonoBehaviour
         direction *= Time.deltaTime;
         
         characterController.Move(direction);
+        //SoundManager.Instance.PlayWalk();
     }
     private void PlayerAdditionalPhysics()
     {
