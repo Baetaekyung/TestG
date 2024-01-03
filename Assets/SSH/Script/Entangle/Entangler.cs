@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,18 @@ using UnityEngine.PlayerLoop;
 
 public class Entangler : BaseObject
 {
-    public BaseObject _baseObject;
-    protected override void Update()
+    public static Entangler instance;
+
+    private void Start()
     {
-        base.Update();
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            _baseObject.SetEntanglement(ref onMoveChanged);
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            _baseObject.UnSetEntanglement(ref onMoveChanged);
-        }
+        instance = this;
+    }
+    public void SetEntangle(BaseObject bo)
+    {
+        bo.SetEntanglement(ref onMoveChanged);
+    }
+    public void UnsetEntangle(BaseObject bo)
+    {
+        bo.UnSetEntanglement(ref onMoveChanged);
     }
 }
