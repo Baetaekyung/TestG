@@ -1948,6 +1948,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: turret 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4159116595952674977, guid: ef5d23b72fcebf24d976cb1ad0ed6995, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 68.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159116595952674977, guid: ef5d23b72fcebf24d976cb1ad0ed6995, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1403.3774
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159116595952674977, guid: ef5d23b72fcebf24d976cb1ad0ed6995, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1648.2526
+      objectReference: {fileID: 0}
     - target: {fileID: 8276523241965519378, guid: ef5d23b72fcebf24d976cb1ad0ed6995, type: 3}
       propertyPath: bullet
       value: 
