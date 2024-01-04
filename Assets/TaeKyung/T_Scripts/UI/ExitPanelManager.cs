@@ -12,10 +12,12 @@ public class ExitPanelManager : MonoBehaviour
         {
             if (panel.activeSelf)
             {
+                Cursor.lockState = CursorLockMode.Locked;
                 panel.SetActive(false);
             }
             else
             {
+                Cursor.lockState = CursorLockMode.None;
                 panel.SetActive(true);
             }
         }
