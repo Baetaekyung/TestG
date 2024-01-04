@@ -15,7 +15,6 @@ public class Fuck9 : FuckBehavior
     {
         base.EnableFuck();
         ming = transform.position;
-        ming = transform.position - ming;
     }
     public override void DisableFuck()
     {
