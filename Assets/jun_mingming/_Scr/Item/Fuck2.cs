@@ -11,22 +11,22 @@ public class Fuck2 : FuckBehavior
     }
     private void FixedUpdate()
     {
-        dir = playerDir;
-        dir.x = 0;
-        dir.z = 0;
-        dir.y = rigidBody.velocity.y;
-        rigidBody.velocity = dir;
+        //dir = playerDir;
+        //dir.x = 0;
+        //dir.z = 0;
+        //dir.y = rigidBody.velocity.y;
+        //rigidBody.velocity = dir;
     }
-    public override void EnableFuck()
+    public override void EnableFuck() 
     {
-        base.EnableFuck();
         rigidBody.useGravity = true;
         a = 0;
+        base.EnableFuck();
     }
     public override void DisableFuck()
     {
-        base.DisableFuck();
         rigidBody.useGravity = false;
+        base.DisableFuck();
     }
     private void OnCollisionEnter(Collision collision)
     {

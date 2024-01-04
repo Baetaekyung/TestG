@@ -20,19 +20,16 @@ public class Inventory : MonoSingleton<Inventory>
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                print("1");
                 HandleWeaponChange(0);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                print("2");
                 HandleWeaponChange(1);
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                print("3");
-                HandleWeaponChange(2);
-            }
+            //else if (Input.GetKeyDown(KeyCode.Alpha3))
+            //{
+            //    HandleWeaponChange(2);
+            //}
 
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))

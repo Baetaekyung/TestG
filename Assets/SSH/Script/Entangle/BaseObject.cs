@@ -24,7 +24,7 @@ public class BaseObject : MonoBehaviour
         {
             onMoveChanged?.Invoke(transform.position - beforePos);
             beforePos = transform.position; // 이거 Transform으로 하면될텐데
-            print("IMoved");
+            //print("IMoved");
         }
     }
 
