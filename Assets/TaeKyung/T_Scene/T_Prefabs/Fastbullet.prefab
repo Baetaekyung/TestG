@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 560614686998634058}
   - component: {fileID: 2627961322207521333}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: Fastbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d65fa51421d19549a5e7870837a08d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 200
+  shootForce: 600
 --- !u!54 &560614686998634058
 Rigidbody:
   m_ObjectHideFlags: 0

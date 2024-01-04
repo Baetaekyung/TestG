@@ -7,6 +7,11 @@ public class Gravity : MonoBehaviour
 {
     public Vector3 gravityVector3;
     private bool iscolliding = false;
+    private Rigidbody rg;
+    private void Start()
+    {
+        rg = GetComponent<Rigidbody>();
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -20,7 +25,13 @@ public class Gravity : MonoBehaviour
 
     void Update()
     {
-        if(!iscolliding)   
-        transform.Translate(gravityVector3 * Time.deltaTime);
+        if (!iscolliding)
+        {
+            rg.velocity=gravityVector3;
+        }
+        else
+        {
+            rg.velocity = Vector3.zero;
+        }
     }
 }
