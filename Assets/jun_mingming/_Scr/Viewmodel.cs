@@ -23,11 +23,6 @@ public class Viewmodel : MonoSingleton<Viewmodel>// 이거 이름 카메라로바꾸기
     {
         transform.SetPositionAndRotation(cam.position, cam.rotation);
     }
-    public void UpdateCoin(int a)
-    {
-        print("das");
-        gay.localPosition = new Vector3(0, 0, a * 5);
-    }
     private void RayTest()
     {
         if(Physics.Raycast(transform.position, transform.forward, out RaycastHit gay, rayFuck))

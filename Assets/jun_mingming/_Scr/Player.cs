@@ -24,7 +24,6 @@ public class Player : MonoSingleton<Player>
     public void AddCoin(int a)
     {
         coin += a;
-        Viewmodel.Instance.UpdateCoin(a + 1);
     }
     public bool CanJump()
     {

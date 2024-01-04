@@ -90,7 +90,6 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
                 Cursor.visible = true;
             }
         }
-        UI_Test_Gay.Instance.t1.text = orientationZ.rotation.eulerAngles.ToString();
         //UI_Test_Gay.Instance.t2.text = orientationY.localRotation.y.ToString();
         //UI_Test_Gay.Instance.t3.text = orientationZ.localRotation.z.ToString();
         #endregion
