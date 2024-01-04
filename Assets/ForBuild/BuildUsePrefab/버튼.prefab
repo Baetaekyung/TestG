@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6620957834290160060}
   - component: {fileID: 668716108279184337}
   m_Layer: 0
-  m_Name: Button
+  m_Name: "\uBC84\uD2BC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
