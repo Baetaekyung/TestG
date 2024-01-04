@@ -22,5 +22,17 @@ public class Gun408 : GunBehavior
             }
         }
     }
+    public override void Interaction1()
+    {
+        Viewmodel.Instance.PlayAnimation(animationName);
+
+        if (Raycast(rayRange, out RaycastHit gasdadawdada))
+        {
+            if (gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
+            {
+                adsadawwd.DisableFuck();
+            }
+        }
+    }
 
 }
