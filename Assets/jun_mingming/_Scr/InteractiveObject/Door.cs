@@ -6,11 +6,11 @@ public class Door : MonoBehaviour
 {
     public void Open()
     {
-        gameObject.SetActive(false);
+        transform.rotation = Quaternion.Euler(-90, 300, 0);
     }
     public void Close()
     {
-        gameObject.SetActive(true);
+        transform.rotation = Quaternion.Euler(-90, 90, 0);
     }
 
 }
