@@ -7,6 +7,7 @@ public class Player : MonoSingleton<Player>
 {
     public float energy;
     public float energyMax;
+    public int coin;
     public GameObject characterController;
     public event Action Gay;
 
@@ -19,6 +20,11 @@ public class Player : MonoSingleton<Player>
     private void Start()
     {
         Update_Energy();
+    }
+    public void AddCoin(int a)
+    {
+        coin += a;
+
     }
     public bool CanJump()
     {

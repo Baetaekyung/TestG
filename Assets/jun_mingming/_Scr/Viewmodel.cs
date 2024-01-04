@@ -52,6 +52,10 @@ public class Viewmodel : MonoSingleton<Viewmodel>// 이거 이름 카메라로바꾸기
             CancelInteract();
         }
     }
+    public void PlayAnimation(string a)
+    {
+        animator.Play(a);
+    }
     private void CancelInteract()
     {
         print("cancelInteract");
