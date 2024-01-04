@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 [AttributeSingleton(SingletonFlags.NoAutoInstance)]
 public class UI_Test_Gay : MonoSingleton<UI_Test_Gay>
 {
 
     [Header("Fuck")]
-    public Text energy;
-    public Text energy2;
+    public TextMeshProUGUI energy;
+    public TextMeshProUGUI energy2;
     public void UpdateEnergy()
     {
         energy.text = "Energy : " + Player.Instance.energy;
-        energy2.text = Player.Instance.energy + "/" + Player.Instance.energyMax;
+        energy2.text = "Max Energy : " + Player.Instance.energyMax;
     }
 }

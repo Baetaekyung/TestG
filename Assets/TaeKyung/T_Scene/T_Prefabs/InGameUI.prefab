@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 2233679572459063822}
   - component: {fileID: 196317797667644873}
   - component: {fileID: 6012690503425525298}
-  - component: {fileID: 5211963712752305871}
   m_Layer: 5
   m_Name: EnergyBackGround
   m_TagString: Untagged
@@ -211,20 +210,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5211963712752305871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139680425373764410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89863883909f0e241bc6aa1fe250c600, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentEnergy: {fileID: 4091852067734878356}
-  maxEnergy: {fileID: 6536907543038317633}
 --- !u!1 &2993282845007015798
 GameObject:
   m_ObjectHideFlags: 0
