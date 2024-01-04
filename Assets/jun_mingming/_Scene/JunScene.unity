@@ -4623,7 +4623,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 272410089}
         m_TargetAssemblyTypeName: Door, Assembly-CSharp
-        m_MethodName: Interact
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

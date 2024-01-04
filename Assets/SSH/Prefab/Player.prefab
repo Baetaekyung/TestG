@@ -373,14 +373,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2547072907157657596}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9035434878771788176}
   m_Father: {fileID: 4954405105948260570}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &3678026459795992410
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,9 +812,9 @@ MonoBehaviour:
   speedMax: 10
   gravity: -9.8
   _yVal: 0
-  dashForce: 10
+  dashForce: 20
   dashTime: 0.2
-  jumpForce: 13
+  jumpForce: 20
   b_running: 0
   canDash: 1
   b_w: 1
