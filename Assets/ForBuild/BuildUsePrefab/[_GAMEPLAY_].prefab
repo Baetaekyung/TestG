@@ -1658,10 +1658,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: alien gun
       objectReference: {fileID: 0}
-    - target: {fileID: 8764095950713096167, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -47,13 +47,21 @@ public class UIManager : MonoSingleton<UIManager>
 
     public void AllPopUpDown()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && currentPopupCount > 0)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            for(int i = 0; i < mainPopupPanels.Count; i++)
+            if (currentPopupCount > 0)
             {
-                mainPopupPanels[i].SetActive(false);
+                for (int i = 0; i < mainPopupPanels.Count; i++)
+                {
+                    mainPopupPanels[i].SetActive(false);
+                }
+                currentPopupCount--;
             }
-            currentPopupCount--;
+            else
+            {
+                mainPopupPanels[1].SetActive(true);
+                currentPopupCount++;
+            }
         }
     }
 }
