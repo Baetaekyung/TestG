@@ -8429,18 +8429,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1799558966820836314, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
-      propertyPath: triggerType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799558966820836314, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
       propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7928123022233297938}
-    - target: {fileID: 2550999503927615441, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
-      propertyPath: triggerType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550999503927615441, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
+    - target: {fileID: 3809619709770872996, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
       propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7928123022233297938}
