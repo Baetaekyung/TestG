@@ -317,8 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 3
+  StageName: 
 --- !u!1 &177496237622928940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,8 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 1
+  StageName: Puzzle1
 --- !u!1 &791375286951246067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,7 +1727,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.11764706, g: 0.50980395, b: 0.61960787, a: 0.7058824}
     m_HighlightedColor: {r: 0, g: 1, b: 1, a: 0.47058824}
-    m_PressedColor: {r: 0, g: 1, b: 1, a: 0.47058824}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.47058824}
     m_SelectedColor: {r: 0, g: 1, b: 1, a: 0.47058824}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2062,8 +2060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 6
+  StageName: haha
 --- !u!1 &1102030773027913505
 GameObject:
   m_ObjectHideFlags: 0
@@ -5810,8 +5807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 2
+  StageName: Puzzle2
 --- !u!1 &2717749835144191098
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,8 +6515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 5
+  StageName: 
 --- !u!1 &2938841576720740704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,8 +6740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 8
+  StageName: Puzzle8
 --- !u!1 &3059968214329324750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7367,8 +7361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 2
+  StageName: 
 --- !u!1 &3437317072626654532
 GameObject:
   m_ObjectHideFlags: 0
@@ -7953,8 +7946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 8
+  StageName: 
 --- !u!1 &3767869557213837890
 GameObject:
   m_ObjectHideFlags: 0
@@ -8180,8 +8172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 9
+  StageName: Puzzle9
 --- !u!1 &4004414426668099567
 GameObject:
   m_ObjectHideFlags: 0
@@ -8997,7 +8988,7 @@ RectTransform:
   m_Father: {fileID: 7483473557362291140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10244,8 +10235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 9
+  StageName: 
 --- !u!1 &5096498240396904343
 GameObject:
   m_ObjectHideFlags: 0
@@ -10490,8 +10480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 4
+  StageName: Puzzle4
 --- !u!1 &5200877692503531983
 GameObject:
   m_ObjectHideFlags: 0
@@ -10716,8 +10705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 7
+  StageName: 
 --- !u!1 &5290027213601747435
 GameObject:
   m_ObjectHideFlags: 0
@@ -10960,7 +10948,7 @@ RectTransform:
   m_Father: {fileID: 289321992445225025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11870,8 +11858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 1
+  StageName: 
 --- !u!1 &5990239889988673579
 GameObject:
   m_ObjectHideFlags: 0
@@ -12249,8 +12236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 4
+  StageName: 
 --- !u!1 &6312878105139565163
 GameObject:
   m_ObjectHideFlags: 0
@@ -13114,6 +13100,7 @@ RectTransform:
   m_Children:
   - {fileID: 2160258549278710890}
   - {fileID: 6525551428581002600}
+  - {fileID: 1184600604169560219}
   m_Father: {fileID: 20591326713467264}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -13171,8 +13158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 5
+  StageName: 
 --- !u!1 &6569383542976952211
 GameObject:
   m_ObjectHideFlags: 0
@@ -13435,7 +13421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7565718288216005383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13897,8 +13883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 7
+  StageName: Puzzle11
 --- !u!1 &7071572778207197499
 GameObject:
   m_ObjectHideFlags: 0
@@ -15194,8 +15179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 2
-  loadStageNum: 6
+  StageName: 
 --- !u!1 &7417549217232662353
 GameObject:
   m_ObjectHideFlags: 0
@@ -15632,6 +15616,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7861349638935095288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184600604169560219}
+  - component: {fileID: 107906187433691947}
+  - component: {fileID: 519644523098317877}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1184600604169560219
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861349638935095288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1995532788484258961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &107906187433691947
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861349638935095288}
+  m_CullTransparentMesh: 1
+--- !u!114 &519644523098317877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861349638935095288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7994078202468758829
 GameObject:
   m_ObjectHideFlags: 0
@@ -15697,7 +15756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC1C\uBC1C \uC911...."
+  m_text: "\uACF5\uC0AC \uC911...."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9cb4d87fb686b694eb72ec78e944ab0d, type: 2}
   m_sharedMaterial: {fileID: -4311826875484048914, guid: 9cb4d87fb686b694eb72ec78e944ab0d, type: 2}
@@ -17027,8 +17086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f13e8f0f7482c94381b600f374eae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterNum: 1
-  loadStageNum: 3
+  StageName: Puzzle3
 --- !u!1 &8483628700288037180
 GameObject:
   m_ObjectHideFlags: 0

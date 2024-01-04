@@ -5,8 +5,10 @@ using UnityEngine;
 public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private GameObject[] mainMenuBottons;
+    [SerializeField] private GameObject exitPanel;
     [SerializeField] private List<GameObject> mainPopupPanels;
     private int currentPopupCount = 0;
+
     public int CurrentPopupCount
     {
         get => currentPopupCount;
@@ -54,12 +56,13 @@ public class UIManager : MonoSingleton<UIManager>
                 for (int i = 0; i < mainPopupPanels.Count; i++)
                 {
                     mainPopupPanels[i].SetActive(false);
+                    exitPanel.SetActive(false);
                 }
                 currentPopupCount--;
             }
             else
             {
-                mainPopupPanels[1].SetActive(true);
+                exitPanel.SetActive(true);
                 currentPopupCount++;
             }
         }

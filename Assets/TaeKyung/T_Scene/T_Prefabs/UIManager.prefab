@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1895150290476062625}
   - component: {fileID: 7444283207960386667}
   - component: {fileID: 2646612136416451678}
-  - component: {fileID: 2721701595997764857}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -50,6 +49,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  exitPanel: {fileID: 0}
+  mainPopupPanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &2646612136416451678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,20 +70,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6f09528b01b3c4f89791f16cd3fa5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2721701595997764857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226331820616278811}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9707b68c62b3d409b64f6795961e65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorNameText: {fileID: 0}
-  mainText: {fileID: 0}
-  dialogPanel: {fileID: 0}
-  currentImage: {fileID: 0}
-  datas: {fileID: 11400000, guid: ea94f9e427066b64c9d1af0049503524, type: 2}
