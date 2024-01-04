@@ -128,6 +128,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7385177823117866664, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
   m_PrefabInstance: {fileID: 3724807646900146458}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &32431513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1997773111344383767, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+  m_PrefabInstance: {fileID: 3724807646900146458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &82033012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2426488073803432069, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
@@ -256,6 +261,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &484279853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3620496573390316970, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+  m_PrefabInstance: {fileID: 3724807646900146458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &665511115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2744807777171246981, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
@@ -426,6 +436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1195591412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8406413482371807713, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+  m_PrefabInstance: {fileID: 3724807646900146458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1287113174 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1789806662775926508, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
@@ -440,6 +455,21 @@ MonoBehaviour:
 --- !u!1 &1353909649 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4773940935405420467, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+  m_PrefabInstance: {fileID: 3724807646900146458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1398166279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1806042730376144356, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+  m_PrefabInstance: {fileID: 3724807646900146458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1410866213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6799264643570721621, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+  m_PrefabInstance: {fileID: 3724807646900146458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1438049113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449762042786968780, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
   m_PrefabInstance: {fileID: 3724807646900146458}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1508068810 stripped
@@ -5474,6 +5504,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
       propertyPath: mainMenuBottons.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
@@ -5492,6 +5526,38 @@ PrefabInstance:
       propertyPath: mainMenuBottons.Array.data[3]
       value: 
       objectReference: {fileID: 665511115}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainMenuBottons.Array.data[4]
+      value: 
+      objectReference: {fileID: 32431513}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainMenuBottons.Array.data[5]
+      value: 
+      objectReference: {fileID: 1195591412}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.data[0]
+      value: 
+      objectReference: {fileID: 1398166279}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.data[1]
+      value: 
+      objectReference: {fileID: 1438049113}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.data[2]
+      value: 
+      objectReference: {fileID: 1410866213}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.data[3]
+      value: 
+      objectReference: {fileID: 484279853}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.data[4]
+      value: 
+      objectReference: {fileID: 32431513}
+    - target: {fileID: 7444283207960386667, guid: eb50b954d4b2f8041b2f46d3924559b8, type: 3}
+      propertyPath: mainPopupPanels.Array.data[5]
+      value: 
+      objectReference: {fileID: 1195591412}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5577,10 +5643,6 @@ PrefabInstance:
     - target: {fileID: 1732175987117811723, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
       propertyPath: m_Name
       value: Main_UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 1732175987117811723, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2715316415900112746, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
       propertyPath: m_Camera
@@ -5668,6 +5730,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4211740235548537272, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799264643570721621, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6942062370735857111, guid: 4ec48da8ff1a97849bc988f997fafaec, type: 3}

@@ -154,7 +154,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
         {
             FuckBehavior.playerDir = dir3;
         }
-        direction += Fuck9.ming;
+        //direction += Fuck9.ming;
         direction *= Time.deltaTime;
 
 

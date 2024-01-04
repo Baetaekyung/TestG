@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Gun408 : GunBehavior
 {
+    public GameObject showRange;
     public float rayRange;
     public string animationName;
     public override void Interaction0()
     {
         Viewmodel.Instance.PlayAnimation(animationName);
 
+        VisualizeGunRange.Instance.Visualize(rayRange, showRange, Viewmodel.Instance.transform);
         if(Raycast(rayRange, out RaycastHit gasdadawdada))
         {
             if(gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
@@ -26,6 +28,7 @@ public class Gun408 : GunBehavior
     {
         Viewmodel.Instance.PlayAnimation(animationName);
 
+        VisualizeGunRange.Instance.Visualize(rayRange, showRange, Viewmodel.Instance.transform);
         if (Raycast(rayRange, out RaycastHit gasdadawdada))
         {
             if (gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
