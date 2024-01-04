@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -55,8 +56,23 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
 
         speed = speedWalk;
     }
+
+    private bool justGrounded = false;
     private void Update()
     {
+        if (characterController.isGrounded)
+        {
+            if (!justGrounded)
+            {
+                SoundManager.Instance.PlayChakjeeSound();
+                justGrounded = true;
+            }
+        }
+        else
+        {
+            justGrounded = false;
+        }
+        
         if (!isReversing)
         {
             PlayerInput();
@@ -233,5 +249,4 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             Player.Instance.SetEnergyMax();
         }
     }
-
 }
