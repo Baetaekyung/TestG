@@ -6,6 +6,7 @@ public class showRange : MonoBehaviour
 {
     private void OnEnable()
     {
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject, 5f);
     }
+
 }

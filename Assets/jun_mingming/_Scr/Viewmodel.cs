@@ -3,6 +3,7 @@ using UnityEngine;
 public class Viewmodel : MonoSingleton<Viewmodel>// 이거 이름 카메라로바꾸기
 {
     public Transform cam;
+    public Transform gay;
 
     public Animator animator;
     public float rayFuck;
@@ -21,6 +22,11 @@ public class Viewmodel : MonoSingleton<Viewmodel>// 이거 이름 카메라로바꾸기
     private void LateUpdate()
     {
         transform.SetPositionAndRotation(cam.position, cam.rotation);
+    }
+    public void UpdateCoin(int a)
+    {
+        print("das");
+        gay.localPosition = new Vector3(0, 0, a * 5);
     }
     private void RayTest()
     {

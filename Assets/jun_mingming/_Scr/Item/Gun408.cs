@@ -10,8 +10,11 @@ public class Gun408 : GunBehavior
     public override void Interaction0()
     {
         Viewmodel.Instance.PlayAnimation(animationName);
-
-        VisualizeGunRange.Instance.Visualize(rayRange, showRange, Viewmodel.Instance.transform);
+        //GameObject ag = Instantiate(showRange, transform.position, Quaternion.identity);
+        //Debug.DrawRay(transform.position, Viewmodel.Instance.transform.forward * 1 * rayRange, Color.white, 8);
+        //ag.transform.LookAt(Viewmodel.Instance.gay);
+        //ag.transform.parent = null;
+        //VisualizeGunRange.Instance.Visualize(rayRange, showRange, Viewmodel.Instance.transform);
         if(Raycast(rayRange, out RaycastHit gasdadawdada))
         {
             if(gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
@@ -28,7 +31,7 @@ public class Gun408 : GunBehavior
     {
         Viewmodel.Instance.PlayAnimation(animationName);
 
-        VisualizeGunRange.Instance.Visualize(rayRange, showRange, Viewmodel.Instance.transform);
+        //VisualizeGunRange.Instance.Visualize(rayRange, showRange, Viewmodel.Instance.transform);
         if (Raycast(rayRange, out RaycastHit gasdadawdada))
         {
             if (gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
