@@ -5184,7 +5184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791639323377202318, guid: b87292148d30ade4dafd921e71264af4, type: 3}
       propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Scene_End
+      value: TSceneT
       objectReference: {fileID: 0}
     - target: {fileID: 8156639891951848082, guid: b87292148d30ade4dafd921e71264af4, type: 3}
       propertyPath: m_LocalPosition.x
