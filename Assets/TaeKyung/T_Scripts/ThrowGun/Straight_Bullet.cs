@@ -19,7 +19,7 @@ public class Straight_Bullet : MonoBehaviour
     {
         if (collision.transform.GetComponent<IsWall>())
             return;
-        if (collision.transform.GetComponent<Player>())
+        if (collision.transform.GetComponent<PlayerControllerScr>())
         {
             string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
             UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);

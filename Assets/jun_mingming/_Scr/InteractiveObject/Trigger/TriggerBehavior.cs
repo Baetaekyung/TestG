@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR;
 
 public abstract class TriggerBehavior : MonoBehaviour
 {
@@ -28,6 +30,9 @@ public abstract class TriggerBehavior : MonoBehaviour
             b_enableTrigger = false;
         }
     }
+
+
+    
     public virtual void Trigger()
     {
         hp--;
