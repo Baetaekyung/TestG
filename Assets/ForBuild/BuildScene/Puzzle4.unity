@@ -155,6 +155,14 @@ PrefabInstance:
       propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 913882848}
+    - target: {fileID: 3809619709770872996, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
+      propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 913882848}
+    - target: {fileID: 3809619709770872996, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
+      propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
     - target: {fileID: 5464222772661418125, guid: 6438491880e98a84fa41b1f173cf4cf7, type: 3}
       propertyPath: m_Size.y
       value: 1
