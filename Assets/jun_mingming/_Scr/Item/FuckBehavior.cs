@@ -16,10 +16,12 @@ public abstract class FuckBehavior : MonoBehaviour
     public virtual void EnableFuck()
     {
         enabled = true;
+        print("gayEnabled");
     }
     public virtual void DisableFuck()
     {
-        enabled = false;
         rigidBody.velocity = Vector3.zero;
+        enabled = false;
+        print("gayDisabled");
     }
 }
