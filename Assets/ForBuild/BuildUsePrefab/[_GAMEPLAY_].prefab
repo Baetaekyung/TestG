@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 3927945604251010754}
+  gay: {fileID: 0}
   animator: {fileID: 0}
   rayFuck: 1.5
   b_fuck: 0
@@ -1643,10 +1644,6 @@ PrefabInstance:
     - target: {fileID: 8764095950713096167, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
       propertyPath: m_Name
       value: alien gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 8764095950713096167, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

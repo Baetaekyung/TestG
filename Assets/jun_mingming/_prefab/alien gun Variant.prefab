@@ -80,5 +80,6 @@ MonoBehaviour:
   offset: {x: 0, y: 0.32, z: 0.46}
   delayEquip: 0
   delayUnequip: 0
+  showRange: {fileID: 8785435683539529176, guid: 3469183eea6fef04e8874171c909fcbc, type: 3}
   rayRange: 5
   animationName: AlineFire
