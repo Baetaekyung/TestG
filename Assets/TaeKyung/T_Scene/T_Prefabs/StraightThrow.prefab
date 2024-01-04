@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4646881399546240629}
   - component: {fileID: 7614593999690647685}
   - component: {fileID: 2995894162471587673}
+  - component: {fileID: 186425729850985266}
   m_Layer: 0
   m_Name: StraightThrow
   m_TagString: Untagged
@@ -149,8 +150,23 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &186425729850985266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2798814554679451716}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d8f3c241f0b1a4c9e8974c1d859052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidBody: {fileID: 0}
+  speed: 0
+  dir: {x: 0, y: 0, z: 0}
 --- !u!1 &3775410774234506647
 GameObject:
   m_ObjectHideFlags: 0
