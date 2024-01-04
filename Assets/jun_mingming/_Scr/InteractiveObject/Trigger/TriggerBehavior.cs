@@ -33,9 +33,14 @@ public abstract class TriggerBehavior : MonoBehaviour
 
 
     
+    private bool istriggered = false;
     public virtual void Trigger()
     {
-        SoundManager.Instance.PlayTriggerSound();
+        if (!istriggered)
+        {
+            SoundManager.Instance.PlayTriggerSound();
+            istriggered = true;
+        }
         hp--;
         interact.Invoke();
         //for (int i = 0; i < interactiveObjects.Count; i++)

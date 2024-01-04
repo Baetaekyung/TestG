@@ -14,64 +14,85 @@ public class SoundManager : MonoSingleton<SoundManager>
     public AudioClip hitSound;
     public AudioClip bigBumpSound;
     public AudioClip triggerSound;
+    public AudioClip doorSound;
+    public AudioClip fallingSound;
 
-    private AudioSource[] audios;
+    private AudioSource[] audioSources;
 
     private bool iswalking = false;
+    private bool isfalling = false;
     private void Start()
     {
-        audios = GetComponentsInChildren<AudioSource>();
+        audioSources = GetComponentsInChildren<AudioSource>();
     }
 
     public void PlayWalk()
     {
-        audios[1].clip = walkSound;
+        audioSources[1].clip = walkSound;
         if (!iswalking)
         {
-            audios[1].Play();
+            audioSources[1].Play();
+            iswalking = true;
         }
 
-        iswalking = true;
     }
     public void StopWalk()
     {
-        audios[1].clip = walkSound;
-        audios[1].Stop();
+        audioSources[1].Stop();
         iswalking = false;
+    }
+    public void PlayFallingSound()
+    {
+        audioSources[3].clip = fallingSound;
+        if (isfalling) return;
+        audioSources[3].Play();
+        isfalling = true;
+    }
+    public void StopFallingSound()
+    {
+        audioSources[3].Stop();
+        isfalling = false;
     }
     public void PlayDash()
     {
-        audios[0].clip = dashSound;
-        audios[0].Play();
+        audioSources[0].clip = dashSound;
+        audioSources[0].Play();
+        audioSources[3].Stop();
+        audioSources[3].Play();
     }
     public void PlayJumpSound()
     {
-        audios[0].clip = jumpSound;
-        audios[0].Play();
+        audioSources[0].clip = jumpSound;
+        audioSources[0].Play();
     }
     public void PlayChakjeeSound()
     {
-        audios[0].clip = chakjeeSound;
-        audios[0].Play();
+        audioSources[0].clip = chakjeeSound;
+        audioSources[0].Play();
     }
     public void PlayShootSound()
     {
-        audios[2].clip = shootSound;
-        audios[2].Play();
+        audioSources[2].clip = shootSound;
+        audioSources[2].Play();
     }
     public void PlayHitSound()
     {
-        audios[0].clip = hitSound;
-        audios[0].Play();
+        audioSources[0].clip = hitSound;
+        audioSources[0].Play();
     }
     public void PlayBigBumpSound()
     {
-        audios[0].clip = bigBumpSound;
-        audios[0].Play();
+        audioSources[0].clip = bigBumpSound;
+        audioSources[0].Play();
     }
     public void PlayTriggerSound()
     {
-        audios[0].clip = triggerSound;
-        audios[0].Play();
+        audioSources[0].clip = triggerSound;
+        audioSources[0].Play();
+    }
+    public void PlayDoorSound()
+    {
+        audioSources[0].clip = doorSound;
+        audioSources[0].Play();
     }
 }

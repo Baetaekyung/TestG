@@ -15,6 +15,7 @@ public class Gaygun : GunBehavior
             if (hit.transform.TryGetComponent(out Respawn r))
             {
                 r.InstantiateBox();
+                SoundManager.Instance.PlayTriggerSound();
             }
         }
     }
