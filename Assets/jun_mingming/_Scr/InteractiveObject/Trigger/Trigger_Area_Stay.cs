@@ -9,6 +9,12 @@ public class Trigger_Area_Stay : NewBehaviourScript
         {
             InitDieTime();
         }
+        if ((other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Obj")) && b_enableTrigger)
+        {
+            SoundManager.Instance.PlayTriggerSound();
+            print("트리거했다헤ㅐ");
+            HandleTrigger();
+        }
     }
     private void OnTriggerStay(Collider other)
     {

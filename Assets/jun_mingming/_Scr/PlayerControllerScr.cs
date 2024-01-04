@@ -38,6 +38,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     private Vector3 direction2;//
     private Vector3 dir3;
     private CharacterController characterController;
+    private SoundManager _soundManager;
 
     public float adaw;
 
@@ -50,6 +51,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     protected override void Awake()
     {
         base.Awake();
+        _soundManager = SoundManager.Instance;
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -58,6 +60,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     }
 
     private bool justGrounded = false;
+    private bool hasFalling;
     private void Update()
     {
         if (characterController.isGrounded)
@@ -67,9 +70,20 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
                 SoundManager.Instance.PlayChakjeeSound();
                 justGrounded = true;
             }
+
+            hasFalling = false;
+            _soundManager.StopFallingSound();
         }
         else
         {
+            if (characterController.velocity.y < 0)
+            {
+                if (!hasFalling)
+                {
+                    _soundManager.PlayFallingSound();
+                    hasFalling = true;
+                }
+            }
             justGrounded = false;
         }
         
