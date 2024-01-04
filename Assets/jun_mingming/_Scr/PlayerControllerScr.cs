@@ -38,7 +38,6 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     private Vector3 direction2;//
     private Vector3 dir3;
     private CharacterController characterController;
-    private SoundManager _soundManager;
 
     public float adaw;
 
@@ -51,10 +50,9 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     protected override void Awake()
     {
         base.Awake();
-        _soundManager = SoundManager.Instance;
         characterController = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 
         speed = speedWalk;
     }
@@ -73,7 +71,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
 
           
             hasFalling = false;
-            _soundManager.StopFallingSound();
+            SoundManager.Instance.StopFallingSound();
         }
         else
         {
@@ -88,6 +86,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             }
             justGrounded = false;
         }
+        print("stillworksuntilhere");
         if (!isReversing)
         {
             PlayerInput();
@@ -95,6 +94,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             PlayerMove();
             HandleEnergy();
         }
+        print("thisstillworksuntilhere");
         //BustMorph();
         #region debug
         if (Input.GetKeyDown(KeyCode.N))
