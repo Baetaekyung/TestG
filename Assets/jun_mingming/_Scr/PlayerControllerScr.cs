@@ -71,8 +71,12 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
                 justGrounded = true;
             }
 
-            hasFalling = false;
-            _soundManager.StopFallingSound();
+            if (hasFalling)
+            {
+                hasFalling = false;
+                _soundManager.StopFallingSound();
+                print("stopfallingsound");
+            }
         }
         else
         {
@@ -80,13 +84,14 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             {
                 if (!hasFalling)
                 {
-                    _soundManager.PlayFallingSound();
+                    //_soundManager.PlayFallingSound();
+                    SoundManager.Instance.PlayFallingSound();
+                    print("fallingsound");
                     hasFalling = true;
                 }
             }
             justGrounded = false;
         }
-        
         if (!isReversing)
         {
             PlayerInput();

@@ -20,6 +20,7 @@ public class SoundManager : MonoSingleton<SoundManager>
     private AudioSource[] audioSources;
 
     private bool iswalking = false;
+    private bool isfalling = false;
     private void Start()
     {
         audioSources = GetComponentsInChildren<AudioSource>();
@@ -31,21 +32,37 @@ public class SoundManager : MonoSingleton<SoundManager>
         if (!iswalking)
         {
             audioSources[1].Play();
+            iswalking = true;
         }
 
-        iswalking = true;
     }
     public void StopWalk()
     {
-        audioSources[1].clip = walkSound;
         audioSources[1].Stop();
         iswalking = false;
+    }
+    public void PlayFallingSound()
+    {
+        audioSources[3].clip = fallingSound;
+        print(isfalling + "dkslfs");
+        if (isfalling) return;
+        audioSources[3].Play();
+        print("fallPlay");
+        isfalling = true;
+        print("iswalkingtrue");
+    }
+    public void StopFallingSound()
+    {
+        audioSources[3].Stop();
+        isfalling = false;
+        print("iswalkingfalse");
     }
     public void PlayDash()
     {
         audioSources[0].clip = dashSound;
         audioSources[0].Play();
         audioSources[3].Stop();
+        audioSources[3].Play();
     }
     public void PlayJumpSound()
     {
@@ -76,18 +93,6 @@ public class SoundManager : MonoSingleton<SoundManager>
     {
         audioSources[0].clip = triggerSound;
         audioSources[0].Play();
-    }
-    public void PlayFallingSound()
-    {
-        if (audioSources[3].clip != fallingSound)
-        {
-            audioSources[3].clip = fallingSound;
-            audioSources[3].Play();
-        }
-    }
-    public void StopFallingSound()
-    {
-        audioSources[3].Stop();
     }
     public void PlayDoorSound()
     {
