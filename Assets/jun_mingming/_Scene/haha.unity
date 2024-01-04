@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: f2229b41793f2954094d79b5321ef4a4, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10033,7 +10033,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e07376be350eb8d4c9d2a04b9d15fc9e, type: 2}
     - target: {fileID: 2791639323377202318, guid: b87292148d30ade4dafd921e71264af4, type: 3}
       propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Puzzle7
+      value: Puzzle11
       objectReference: {fileID: 0}
     - target: {fileID: 8156639891951848082, guid: b87292148d30ade4dafd921e71264af4, type: 3}
       propertyPath: m_LocalPosition.x
