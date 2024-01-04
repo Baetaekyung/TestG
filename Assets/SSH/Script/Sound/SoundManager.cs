@@ -44,18 +44,14 @@ public class SoundManager : MonoSingleton<SoundManager>
     public void PlayFallingSound()
     {
         audioSources[3].clip = fallingSound;
-        print(isfalling + "dkslfs");
         if (isfalling) return;
         audioSources[3].Play();
-        print("fallPlay");
         isfalling = true;
-        print("iswalkingtrue");
     }
     public void StopFallingSound()
     {
         audioSources[3].Stop();
         isfalling = false;
-        print("iswalkingfalse");
     }
     public void PlayDash()
     {

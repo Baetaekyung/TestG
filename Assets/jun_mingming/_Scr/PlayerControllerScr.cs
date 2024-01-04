@@ -71,12 +71,9 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
                 justGrounded = true;
             }
 
-            if (hasFalling)
-            {
-                hasFalling = false;
-                _soundManager.StopFallingSound();
-                print("stopfallingsound");
-            }
+          
+            hasFalling = false;
+            _soundManager.StopFallingSound();
         }
         else
         {
@@ -86,7 +83,6 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
                 {
                     //_soundManager.PlayFallingSound();
                     SoundManager.Instance.PlayFallingSound();
-                    print("fallingsound");
                     hasFalling = true;
                 }
             }
