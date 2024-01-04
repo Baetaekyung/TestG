@@ -5,12 +5,11 @@ using UnityEngine.EventSystems;
 
 public class StageEnter : MonoBehaviour, IPointerDownHandler
 {
-    [SerializeField] private int chapterNum;
-    [SerializeField] private int loadStageNum;
+    [SerializeField] private string StageName;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        //UnityEngine.SceneManagement.SceneManager.LoadScene(chapterNum.ToString() + loadStageNum.ToString());
-        Debug.Log(chapterNum.ToString() + " - " + loadStageNum.ToString());
+        UnityEngine.SceneManagement.SceneManager.LoadScene(StageName);
+        
     }
 }
