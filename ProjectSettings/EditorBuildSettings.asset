@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/jun_mingming/_Scene/haha.unity
     guid: 66ed609f0f0072a44aac74f41964bd96
   - enabled: 1
-    path: Assets/SSH/Scene/PuzzleMap/Puzzle11.unity
+    path: Assets/ForBuild/BuildScene/Puzzle11.unity
     guid: 92c2f9a4bc6f2c944b1b8049a9144199
   - enabled: 1
     path: Assets/ForBuild/BuildScene/Scene_End.unity
