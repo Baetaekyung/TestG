@@ -9,6 +9,7 @@ public class Gun408 : GunBehavior
     public string animationName;
     public override void Interaction0()
     {
+        SoundManager.Instance.PlayShootSound();
         Viewmodel.Instance.PlayAnimation(animationName);
         //GameObject ag = Instantiate(showRange, transform.position, Quaternion.identity);
         //Debug.DrawRay(transform.position, Viewmodel.Instance.transform.forward * 1 * rayRange, Color.white, 8);
@@ -20,6 +21,7 @@ public class Gun408 : GunBehavior
             if(gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
             {
                 adsadawwd.EnableFuck();
+                SoundManager.Instance.PlayHitSound();
             }
             else if(gasdadawdada.transform.TryGetComponent(out Trigger_Raycast2 a))
             {
@@ -36,6 +38,7 @@ public class Gun408 : GunBehavior
         {
             if (gasdadawdada.transform.TryGetComponent(out FuckBehavior adsadawwd))
             {
+                SoundManager.Instance.PlayHitSound();
                 adsadawwd.DisableFuck();
             }
         }

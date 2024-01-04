@@ -10,6 +10,10 @@ public class SoundManager : MonoSingleton<SoundManager>
     public AudioClip jumpSound;
     public AudioClip chakjeeSound;
     public AudioClip dashSound;
+    public AudioClip shootSound;
+    public AudioClip hitSound;
+    public AudioClip bigBumpSound;
+    public AudioClip triggerSound;
 
     private AudioSource[] audios;
 
@@ -48,6 +52,26 @@ public class SoundManager : MonoSingleton<SoundManager>
     public void PlayChakjeeSound()
     {
         audios[0].clip = chakjeeSound;
+        audios[0].Play();
+    }
+    public void PlayShootSound()
+    {
+        audios[2].clip = shootSound;
+        audios[2].Play();
+    }
+    public void PlayHitSound()
+    {
+        audios[0].clip = hitSound;
+        audios[0].Play();
+    }
+    public void PlayBigBumpSound()
+    {
+        audios[0].clip = bigBumpSound;
+        audios[0].Play();
+    }
+    public void PlayTriggerSound()
+    {
+        audios[0].clip = triggerSound;
         audios[0].Play();
     }
 }

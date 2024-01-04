@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Observation
   - Obj
+  - Floor
   layers:
   - Default
   - TransparentFX

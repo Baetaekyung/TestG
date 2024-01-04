@@ -593,6 +593,18 @@ MonoBehaviour:
   speed: 200
   dir: {x: 0, y: 0, z: 0}
   a: 0
+--- !u!114 &249929507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249929499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b56c5ec86e71d843ae13b8d78c7c7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &306077720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -611,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 1077524525}
     - target: {fileID: 4531961972165873384, guid: 1dadc5a3f82d1d247bd2555f6b5c975b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5408254
+      value: -3.6072474
       objectReference: {fileID: 0}
     - target: {fileID: 4531961972165873384, guid: 1dadc5a3f82d1d247bd2555f6b5c975b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -619,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4531961972165873384, guid: 1dadc5a3f82d1d247bd2555f6b5c975b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.4045978
+      value: 0.3594724
       objectReference: {fileID: 0}
     - target: {fileID: 4531961972165873384, guid: 1dadc5a3f82d1d247bd2555f6b5c975b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3440,6 +3452,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5470119392810958675, guid: 01fe97d6d91cec24196cc911173c6583, type: 3}
       insertIndex: -1
       addedObject: {fileID: 249929506}
+    - targetCorrespondingSourceObject: {fileID: 5470119392810958675, guid: 01fe97d6d91cec24196cc911173c6583, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 249929507}
   m_SourcePrefab: {fileID: 100100000, guid: 01fe97d6d91cec24196cc911173c6583, type: 3}
 --- !u!1 &1738138605
 GameObject:
@@ -3575,7 +3590,7 @@ GameObject:
   - component: {fileID: 1757771683}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4292,6 +4307,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2446152220956676953, guid: eaab54382b7dd3445b0350e1495bee63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4378605514144609432, guid: eaab54382b7dd3445b0350e1495bee63, type: 3}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5083353872325547395, guid: eaab54382b7dd3445b0350e1495bee63, type: 3}
