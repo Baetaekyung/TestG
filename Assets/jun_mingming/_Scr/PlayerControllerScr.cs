@@ -51,8 +51,8 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     {
         base.Awake();
         characterController = GetComponent<CharacterController>();
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         speed = speedWalk;
     }
