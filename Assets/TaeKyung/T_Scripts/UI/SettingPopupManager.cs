@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[AttributeSingleton(SingletonFlags.NoAutoInstance)]
 public class SettingPopupManager : MonoSingleton<SettingPopupManager>
 {
     public bool currentPopupExist = true;
