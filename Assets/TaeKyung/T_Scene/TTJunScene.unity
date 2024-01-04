@@ -646,7 +646,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
+  - {fileID: 2100000, guid: 2301d358495f57e45b395f8e75dc5774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   dashTime: 0.2
   jumpForce: 13
   b_running: 0
-  canDash: 1
+  adaw: 0
   b_w: 1
   isReversing: 0
 --- !u!143 &796741168
@@ -3928,6 +3928,7 @@ MonoBehaviour:
   t2: {fileID: 1860201979}
   t3: {fileID: 1831307375}
   energy: {fileID: 613217965}
+  energy2: {fileID: 0}
 --- !u!1 &1178769685
 GameObject:
   m_ObjectHideFlags: 0
@@ -4323,7 +4324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15b4f895a55c9224bad868dcf10eebac, type: 2}
+  - {fileID: 2100000, guid: 2301d358495f57e45b395f8e75dc5774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5466,6 +5467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energy: 0
+  energyMax: 0
   characterController: {fileID: 796741166}
 --- !u!1 &1870862525
 GameObject:
