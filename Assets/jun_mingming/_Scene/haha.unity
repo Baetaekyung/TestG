@@ -16257,6 +16257,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4476700278665613856, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
+      propertyPath: spawnPos
+      value: 
+      objectReference: {fileID: 1842551080}
+    - target: {fileID: 4476700278665613856, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
+      propertyPath: showRange
+      value: 
+      objectReference: {fileID: 8785435683539529176, guid: 3469183eea6fef04e8874171c909fcbc, type: 3}
     - target: {fileID: 8764095950713096167, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
       propertyPath: m_Name
       value: alien gun
