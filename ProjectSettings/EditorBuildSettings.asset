@@ -21,12 +21,12 @@ EditorBuildSettings:
     path: Assets/ForBuild/BuildScene/Puzzle5.unity
     guid: d4268c29eb6a3914990deebbf7fb6a61
   - enabled: 1
-    path: Assets/ForBuild/BuildScene/Puzzle6.unity
-    guid: e3362625edaf1f5408bc1c842ef32c50
-  - enabled: 1
     path: Assets/ForBuild/BuildScene/Puzzle7.unity
     guid: 05dcef1200132d445946b8253d3f540d
   - enabled: 1
     path: Assets/ForBuild/BuildScene/Puzzle8.unity
     guid: c65a9e7a356672b468aabbdae9944edf
+  - enabled: 1
+    path: Assets/jun_mingming/_Scene/haha.unity
+    guid: 66ed609f0f0072a44aac74f41964bd96
   m_configObjects: {}

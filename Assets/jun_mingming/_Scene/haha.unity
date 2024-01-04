@@ -2434,13 +2434,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 437797326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bce8a7b8611664f931f13ad891c27f, type: 3}
+  m_Script: {fileID: 11500000, guid: 309f6f7d3836bcc45b0e88a4459d75d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isReversing: 0
-  positionTarget: {fileID: 155383526}
-  rotationTarget: {fileID: 934270079}
-  pla: {fileID: 155383523}
 --- !u!1 &447420673
 GameObject:
   m_ObjectHideFlags: 0
@@ -10035,6 +10031,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e07376be350eb8d4c9d2a04b9d15fc9e, type: 2}
+    - target: {fileID: 2791639323377202318, guid: b87292148d30ade4dafd921e71264af4, type: 3}
+      propertyPath: interact.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Puzzle7
+      objectReference: {fileID: 0}
     - target: {fileID: 8156639891951848082, guid: b87292148d30ade4dafd921e71264af4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.437513
