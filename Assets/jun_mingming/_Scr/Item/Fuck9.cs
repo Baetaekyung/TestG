@@ -8,13 +8,14 @@ public class Fuck9 : FuckBehavior
     private void Update()
     {
         ming = transform.position - ming;
-
+        print(ming);
         ming = transform.position;
     }
     public override void EnableFuck()
     {
         base.EnableFuck();
         ming = transform.position;
+        ming = transform.position - ming;
     }
     public override void DisableFuck()
     {
