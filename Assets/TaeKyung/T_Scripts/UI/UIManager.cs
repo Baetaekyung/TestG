@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private GameObject[] mainMenuBottons;
+    [SerializeField] private List<GameObject> mainPopupPanels;
     private int currentPopupCount = 0;
     public int CurrentPopupCount
     {
@@ -25,6 +26,7 @@ public class UIManager : MonoSingleton<UIManager>
         {
             AllBottonActiveFalse();
         }
+        AllPopUpDown();
     }
 
     public void AllBottonActiveFalse()
@@ -40,6 +42,18 @@ public class UIManager : MonoSingleton<UIManager>
         for (int index = 0; index < mainMenuBottons.Length; index++)
         {
             mainMenuBottons[index].SetActive(true);
+        }
+    }
+
+    public void AllPopUpDown()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) && currentPopupCount > 0)
+        {
+            for(int i = 0; i < mainPopupPanels.Count; i++)
+            {
+                mainPopupPanels[i].SetActive(false);
+            }
+            currentPopupCount--;
         }
     }
 }
