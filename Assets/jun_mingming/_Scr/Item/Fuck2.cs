@@ -12,6 +12,8 @@ public class Fuck2 : FuckBehavior
     private void FixedUpdate()
     {
         dir = playerDir;
+        dir.x = 0;
+        dir.z = 0;
         dir.y = rigidBody.velocity.y;
         rigidBody.velocity = dir;
     }
@@ -28,7 +30,8 @@ public class Fuck2 : FuckBehavior
     }
     private void OnCollisionEnter(Collision collision)
     {
-        PlayerControllerScr.Instance.PlayerJump(a * 20);
+        PlayerControllerScr.Instance.PlayerJump(a * speed);
+        print(a * speed);
         DisableFuck();
     }
 }

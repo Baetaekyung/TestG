@@ -33,12 +33,12 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
 
     public float jumpForce;
     public bool b_running;
-    public bool canDash = true;
-
     private Vector3 direction;
     private Vector3 direction2;//
     private Vector3 dir3;
     private CharacterController characterController;
+
+    public float adaw;
 
     [SerializeField] private bool b_w;
     public bool isReversing = false;//역재생하는 동안에는 이동이나 입력 불가
@@ -62,6 +62,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             PlayerInput();
             PlayerMouse();
             PlayerMove();
+            HandleEnergy();
         }
         //BustMorph();
         #region debug
@@ -123,7 +124,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
         }
 
         //leftShift/dash
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && Player.Instance.CanJump())
         {
             StartCoroutine(PlayerDash());
             SoundManager.Instance.PlayDash();
@@ -188,6 +189,8 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     {
         float currentTime = 0;
         var currentDirection = Vector3.zero;
+        _yVal = 0;
+        Player.Instance.AddEnergy(-1);
         if(direction.magnitude == 0)
         {
             direction2 = Vector3.forward;
@@ -223,4 +226,12 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
         yRotation = gay.y;
         PlayerMouse();
     }
+    private void HandleEnergy()
+    {
+        if (characterController.isGrounded)
+        {
+            Player.Instance.SetEnergyMax();
+        }
+    }
+
 }

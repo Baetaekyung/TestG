@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoSingleton<Player>
 {
     public float energy;
+    public float energyMax;
     public GameObject characterController;
     public event Action Gay;
 
@@ -13,15 +14,34 @@ public class Player : MonoSingleton<Player>
     {
         base.Awake();
         //Gay += UI_Test_Gay.Instance.UpdateEnergy;
+        energy = energyMax;
     }
-    
+    private void Start()
+    {
+        Update_Energy();
+    }
+    public bool CanJump()
+    {
+        return energy > 0;
+    }
+    public void SetEnergyMax()
+    {
+        energy = energyMax;
+        Update_Energy();
+    }
     public void AddEnergy(int asdad)
     {
         energy += asdad;
         Update_Energy();
     }
+    public void AddEnergyMax(int asdaa)
+    {
+        energyMax += asdaa;
+        Update_Energy();
+    }
     public void Update_Energy()
     {
+        UI_Test_Gay.Instance.UpdateEnergy();
         Gay?.Invoke();
     }
     protected override void OnDestroy()
