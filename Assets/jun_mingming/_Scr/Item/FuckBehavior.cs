@@ -21,7 +21,7 @@ public abstract class FuckBehavior : MonoBehaviour
     public virtual void DisableFuck()
     {
         rigidBody.velocity = Vector3.zero;
-        enabled = false;
+        enabled = false;    
         print("gayDisabled");
     }
 }

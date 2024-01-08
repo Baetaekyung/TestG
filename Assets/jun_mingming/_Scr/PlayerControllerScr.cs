@@ -86,7 +86,6 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             }
             justGrounded = false;
         }
-        print("stillworksuntilhere");
         if (!isReversing)
         {
             PlayerInput();
@@ -94,7 +93,6 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
             PlayerMove();
             HandleEnergy();
         }
-        print("thisstillworksuntilhere");
         //BustMorph();
         #region debug
         if (Input.GetKeyDown(KeyCode.N))
