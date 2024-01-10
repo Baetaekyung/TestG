@@ -81,5 +81,5 @@ MonoBehaviour:
   delayEquip: 0
   delayUnequip: 0
   showRange: {fileID: 8785435683539529176, guid: 3469183eea6fef04e8874171c909fcbc, type: 3}
-  rayRange: 5
+  rayRange: 100
   animationName: AlineFire
