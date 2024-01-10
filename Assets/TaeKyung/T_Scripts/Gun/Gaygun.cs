@@ -14,8 +14,12 @@ public class Gaygun : GunBehavior
         {
             if (hit.transform.TryGetComponent(out Respawn r))
             {
-                r.InstantiateBox();
+                r.InstantiateBox(); 
                 SoundManager.Instance.PlayTriggerSound();
+            }
+            else if(hit.transform.TryGetComponent(out MingMingMing mingMingMing))
+            {
+                mingMingMing.GayFuckNo();
             }
         }
     }

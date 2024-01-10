@@ -10,6 +10,7 @@ public abstract class TriggerBehavior : MonoBehaviour
     [Header("General")]
     //public List<InteractiveObject> interactiveObjects;
     public UnityEvent interact;
+    public UnityEvent interact2;
     public int hp = 1;
     public float delay = 0;
     public bool b_enableTrigger = true;
@@ -52,6 +53,34 @@ public abstract class TriggerBehavior : MonoBehaviour
         {
             if (triggerType == TriggerType.DontDestroy) return;
             if(triggerType == TriggerType.Destroy)
+            {
+                Destroy(gameObject);
+            }
+            else if (triggerType == TriggerType.DestroyComponent)
+            {
+                Destroy(this);
+            }
+            DestroyGay();
+        }
+    }
+    public virtual void Tr2()
+    {
+        if (!istriggered)
+        {
+            SoundManager.Instance.PlayTriggerSound();
+            istriggered = true;
+        }
+        hp--;
+        interact2.Invoke();
+        //for (int i = 0; i < interactiveObjects.Count; i++)
+        //{
+        //    interactiveObjects[i].Interact();
+        //}
+        b_enableTrigger = true;
+        if (hp <= 0)
+        {
+            if (triggerType == TriggerType.DontDestroy) return;
+            if (triggerType == TriggerType.Destroy)
             {
                 Destroy(gameObject);
             }
