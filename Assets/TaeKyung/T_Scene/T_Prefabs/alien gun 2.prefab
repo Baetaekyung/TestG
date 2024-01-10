@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 4994734469738752348}
   - component: {fileID: 7138402176000554607}
   - component: {fileID: 1086598957253042377}
+  - component: {fileID: 8725215399050347707}
   m_Layer: 0
   m_Name: alien gun 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4994734469738752348
 Transform:
   m_ObjectHideFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4266037353283318892}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.43163213, y: 0.56008375, z: 0.5600837, w: 0.4316321}
+  m_LocalRotation: {x: -0.43163332, y: 0.56008273, z: 0.56008273, w: 0.43163332}
   m_LocalPosition: {x: -0.14769006, y: 1.250084, z: 4.25}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
@@ -83,3 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8725215399050347707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266037353283318892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf4ecfbd7cb17048bd344433881dd48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0.3, z: 0.666}
+  delayEquip: 0
+  delayUnequip: 0
+  gunRange: 100
