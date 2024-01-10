@@ -12,7 +12,10 @@ public class Inventory : MonoSingleton<Inventory>
     {
         base.Awake();
         currentItemIndex = 0;
-        item[currentItemIndex].Equip();
+        if(item.Count > 0)
+        {
+            item[currentItemIndex].Equip();
+        }
     }
     private void Update()
     {
@@ -34,20 +37,21 @@ public class Inventory : MonoSingleton<Inventory>
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            item[currentItemIndex].Interaction0();
+            if (item.Count > 0) item[currentItemIndex].Interaction0();
         }
         else if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            item[currentItemIndex].Interaction1();
+            if (item.Count > 0) item[currentItemIndex].Interaction1();
         }
     }
     public void HandleWeaponChange(int a)
     {
-        if (currentItemIndex != a && item.Count > a)
+        if (currentItemIndex != a && item.Count > a && item[currentItemIndex] != null)
         {
             WeaponChange(a);
         }
     }
+    
     public void WeaponChange(int a)
     {
         item[currentItemIndex].Unequip();
