@@ -16,7 +16,7 @@ public class PlayerControllerScr : MonoSingleton<PlayerControllerScr>
     public float xSens;
     public float ySens;
     private float xRotation;
-    private float yRotation;
+    private float yRotation = 90;
 
     [Space(10)]
     public AnimationCurve bob;
