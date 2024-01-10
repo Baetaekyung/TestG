@@ -1992,6 +1992,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4476700278665613856, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
+      propertyPath: rayRange
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8764095950713096167, guid: 9c0153cea762ae848aad9b988dc195e5, type: 3}
       propertyPath: m_Name
       value: alien gun
